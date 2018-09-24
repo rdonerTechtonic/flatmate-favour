@@ -10,6 +10,58 @@
 </head>
 
 <body>
+  <h1><span class="badge badge-primary"> New/Edit Event</span></h2>
+  <div class="container container-fluid">
+    <div class="row">
+      <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <form>
+          <div class="form-group">
+            <label for="eventTitle">Title:</label>
+            <input type="text" class="form-control" id="eventTitle" placeholder="Example: Clean the kitchen.">
+          </div>
+          <div class="form-group">
+            <label for="eventLocation">Location:</label>
+            <input type="text" class="form-control" id="eventLocation" placeholder="Example: The kitchen.">
+          </div>
+          <div class="form-group">
+            <label for="selectRoommate">Roommate:</label>
+            <select class="custom-select" id="selectRommate">
+              <option selected>Select a roommate.</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="eventNotes">Notes:</label>
+            <input type="text" class="form-control" id="eventNotes" placeholder="Example: Do the dishes.">
+          </div>
+          <div class="form-group">
+            <label for="startEventDate">Start Date:</label>
+            <input type="date" class="form-control" id="startEventDate">
+          </div>
+          <div class="form-group">
+            <label for="startEventTime">Start Time:</label>
+            <input type="time" class="form-control" id="startEventTime">
+          </div>
+          <div class="form-group">
+            <label for="endEventDate">End Date:</label>
+            <input type="date" class="form-control" id="endEventDate">
+          </div>
+          <div class="form-group">
+            <label for="endEventTime">End Time:</label>
+            <input type="time" class="form-control" id="endEventTime">
+          </div>
+          <div class="form-group inline-form">
+            <button type="button" class="btn btn-danger">Delete</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-sm-1"></div>
+    </div>
+  </div>
   <script src="bootstrap.min.js"></script>
 </body>
 
