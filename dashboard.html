@@ -4,37 +4,42 @@
 <head>
   <meta charset="utf-8">
   <title>Dashboard</title>
-  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="dashboard.css">
   <link rel="stylesheet" <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap.min.css">
+
 </head>
 
 
-<div class="container container-fluid">
+<div class="container-fluid">
+
 
   <body>
-    <a href="#">
-    <i class="fas fa-users"></i>
-  </a>
-    <a href="#">
-    <i class="fas fa-user"></i>
-  </a>
-    <a href="#">
-    <i class="fas fa-user"></i>
-  </a>
-    <a href="#">
-    <i class="fas fa-user"></i>
-  </a>
-    <a href="#">
-    <i class="fas fa-home"></i>
-  </a>
-    <a href="#">
-  <i class="fas fa-users-cog"></i>
-  </a>
+    <div class="container text-center" id="users">
+      <a href="#">
+        <i class="fas fa-users"></i>
+      </a>
+      <a href="#">
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="#">
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="#">
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="household.html">
+        <i class="fas fa-home"></i>
+      </a>
+      <a href="#">
+      <i class="fas fa-users-cog"></i>
+      </a>
+    </div>
 
 
     <form>
       <div class="form-group">
-        <label for="formGroupExampleInput2">Another label</label>
+        <label for="formGroupExampleInput2">Date</label>
         <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
       </div>
     </form>
@@ -42,57 +47,73 @@
     <div id="accordion">
       <div class="card">
         <div class="card-header" id="headingOne">
-          <h5 class="mb-0">
-            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div class="row">
+            <!-- <div class="alert alert-success" role="alert">
+            A simple success alert—check it out!
+          </div> -->
+            <h5 class="mb-0 col-10">
+            <button class="btn btn-link alert alert-success" role="alert" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Collapsible Group Item #1
             </button>
           </h5>
+            <button class="col-2 btn btn-outline-success" type="button" name="button">Done</button>
+          </div>
         </div>
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-            aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            Bacon ipsum dolor amet porchetta flank short ribs, pork chop frankfurter salami turducken doner tongue tail andouille shankle pork loin picanha. Jerky bacon venison brisket filet mignon. Beef ribs burgdoggen bresaola ham picanha
+            alcatra
+            chuck. Porchetta pork loin shank boudin rump, corned beef kevin biltong turducken fatback. Buffalo ham hock rump flank meatball doner shankle pork chop sausage pork frankfurter pig kielbasa. Pork chop chuck ribeye spare ribs venison
+            pork
+            loin sausage kevin t-bone tenderloin.
           </div>
         </div>
       </div>
       <div class="card">
         <div class="card-header" id="headingTwo">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <div class="row">
+            <h5 class="mb-0 col-10">
+            <button class="btn btn-link collapsed alert alert-danger" role="alert" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Collapsible Group Item #2
             </button>
           </h5>
+            <button class="col-2 btn btn-outline-danger" type="button" name="button">Accept</button>
+          </div>
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-            aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            Ground round pork meatball porchetta, beef jerky salami venison. Doner boudin salami swine. Shank andouille strip steak, pancetta chicken cupim jowl meatball tail. Biltong swine landjaeger burgdoggen jerky. Fatback leberkas turkey
+            venison alcatra tri-tip pork cow porchetta. Turkey short ribs flank salami chicken fatback corned beef pork chop t-bone chuck alcatra doner frankfurter capicola.
           </div>
         </div>
       </div>
 
       <div class="card">
         <div class="card-header" id="headingThree">
-          <h5 class="mb-0">
-            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <!-- <div class="alert alert-warning" role="alert">
+            A simple warning alert—check it out!
+          </div> -->
+          <div class="row">
+            <h5 class="mb-0 col-10">
+            <button class="btn btn-link collapsed alert alert-warning" role="alert" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Collapsible Group Item #3
             </button>
           </h5>
+            <button class="btn btn-outline-warning col-2" type="button" name="button">Complete?</button>
+          </div>
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
-            aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
-            craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            Ball tip leberkas burgdoggen, chuck boudin filet mignon kielbasa. Turkey tenderloin bacon filet mignon biltong rump shoulder cupim. Filet mignon chicken corned beef landjaeger, porchetta capicola leberkas jerky pastrami. Tri-tip
+            shoulder
+            meatball buffalo. Drumstick kielbasa kevin fatback, filet mignon pancetta pork belly ribeye turducken ham turkey doner. Spare ribs ground round capicola landjaeger ham hock chuck. Porchetta turducken sirloin flank cow shankle cupim.
           </div>
         </div>
       </div>
     </div>
 
-    <a href="#">
+    <a class="float-right" href="event.html">
       <i class="fas fa-plus-circle"></i>
     </a>
 
@@ -101,7 +122,11 @@
 
 
 
-</body>
+
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
 
 </html>
