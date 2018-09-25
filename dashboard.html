@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dashboard</title>
   <link rel="stylesheet" href="dashboard.css">
   <link rel="stylesheet" <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -11,11 +12,11 @@
 </head>
 
 
-<div class="container-fluid">
+<div class="container">
 
   <img src="logo.png" alt="">
 
-  <body>
+  <body class="mx-5">
     <div class="container text-center" id="users">
       <a href="#">
         <i class="fas fa-users"></i>
@@ -32,7 +33,7 @@
       <a href="household.html">
         <i class="fas fa-home"></i>
       </a>
-      <a href="#">
+      <a href="household.html">
       <i class="fas fa-users-cog"></i>
       </a>
     </div>
@@ -52,12 +53,12 @@
             <!-- <div class="alert alert-success" role="alert">
             A simple success alert—check it out!
           </div> -->
-            <h5 class="mb-0 col-10">
-            <button class="btn btn-link alert alert-success" role="alert" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <!-- <div class="col-10"> -->
+            <button class="col-8 alert alert-success" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="item1">
               Collapsible Group Item #1
             </button>
-          </h5>
-            <button class="col-2 btn btn-outline-success" type="button" name="button">Done</button>
+            <!-- </div> -->
+            <button class="col-3 btn btn-outline-success" type="button" name="button" id="button1">Done</button>
           </div>
         </div>
 
@@ -68,58 +69,66 @@
             chuck. Porchetta pork loin shank boudin rump, corned beef kevin biltong turducken fatback. Buffalo ham hock rump flank meatball doner shankle pork chop sausage pork frankfurter pig kielbasa. Pork chop chuck ribeye spare ribs venison
             pork
             loin sausage kevin t-bone tenderloin.
+            <div class="person">
+              Owner: Ryan
+            </div>
+            <div class="dates">
+              Dates: 9/25/18 2:40PM - 9/26/18 5:00PM
+            </div>
+            <div class="location">
+              Location: Classroom
+            </div>
           </div>
         </div>
-      </div>
-      <div class="card">
-        <div class="card-header" id="headingTwo">
-          <div class="row">
-            <h5 class="mb-0 col-10">
-            <button class="btn btn-link collapsed alert alert-danger" role="alert" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <div class="row">
+              <h5 class="mb-0 col-10">
+            <button class="btn-link collapsed alert alert-danger" role="alert" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Collapsible Group Item #2
             </button>
           </h5>
-            <button class="col-2 btn btn-outline-danger" type="button" name="button">Accept</button>
+              <button class="col-2 btn btn-outline-danger" type="button" name="button">Accept</button>
+            </div>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+              Ground round pork meatball porchetta, beef jerky salami venison. Doner boudin salami swine. Shank andouille strip steak, pancetta chicken cupim jowl meatball tail. Biltong swine landjaeger burgdoggen jerky. Fatback leberkas turkey
+              venison alcatra tri-tip pork cow porchetta. Turkey short ribs flank salami chicken fatback corned beef pork chop t-bone chuck alcatra doner frankfurter capicola.
+            </div>
           </div>
         </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-          <div class="card-body">
-            Ground round pork meatball porchetta, beef jerky salami venison. Doner boudin salami swine. Shank andouille strip steak, pancetta chicken cupim jowl meatball tail. Biltong swine landjaeger burgdoggen jerky. Fatback leberkas turkey
-            venison alcatra tri-tip pork cow porchetta. Turkey short ribs flank salami chicken fatback corned beef pork chop t-bone chuck alcatra doner frankfurter capicola.
-          </div>
-        </div>
-      </div>
 
-      <div class="card">
-        <div class="card-header" id="headingThree">
-          <!-- <div class="alert alert-warning" role="alert">
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <!-- <div class="alert alert-warning" role="alert">
             A simple warning alert—check it out!
           </div> -->
-          <div class="row">
-            <h5 class="mb-0 col-10">
-            <button class="btn btn-link collapsed alert alert-warning" role="alert" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <div class="row">
+              <h5 class="mb-0 col-10">
+            <button class="btn-link collapsed alert alert-warning" role="alert" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Collapsible Group Item #3
             </button>
           </h5>
-            <button class="btn btn-outline-warning col-2" type="button" name="button">Complete?</button>
+              <button class="btn btn-outline-warning col-2" type="button" name="button">Complete?</button>
+            </div>
           </div>
-        </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-          <div class="card-body">
-            Ball tip leberkas burgdoggen, chuck boudin filet mignon kielbasa. Turkey tenderloin bacon filet mignon biltong rump shoulder cupim. Filet mignon chicken corned beef landjaeger, porchetta capicola leberkas jerky pastrami. Tri-tip
-            shoulder
-            meatball buffalo. Drumstick kielbasa kevin fatback, filet mignon pancetta pork belly ribeye turducken ham turkey doner. Spare ribs ground round capicola landjaeger ham hock chuck. Porchetta turducken sirloin flank cow shankle cupim.
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+              Ball tip leberkas burgdoggen, chuck boudin filet mignon kielbasa. Turkey tenderloin bacon filet mignon biltong rump shoulder cupim. Filet mignon chicken corned beef landjaeger, porchetta capicola leberkas jerky pastrami. Tri-tip
+              shoulder
+              meatball buffalo. Drumstick kielbasa kevin fatback, filet mignon pancetta pork belly ribeye turducken ham turkey doner. Spare ribs ground round capicola landjaeger ham hock chuck. Porchetta turducken sirloin flank cow shankle cupim.
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <a class="float-right" href="event.html">
+      <a class="float-right" href="event.html">
       <i class="fas fa-plus-circle"></i>
     </a>
 
 
-</div>
+    </div>
 
 
 
