@@ -9,46 +9,46 @@
   <title>Add/Edit Event</title>
 </head>
 
-<body class="mx-5">
-  <h1><span class="badge badge-primary"> New/Edit Event</span></h1>
-        <form>
-          <div class="form-group">
-            <label for="eventTitle">Title:</label>
-            <input type="text" class="form-control" id="eventTitle" placeholder="Example: Clean the kitchen.">
-          </div>
-          <div class="form-group">
-            <label for="eventLocation">Location:</label>
-            <input type="text" class="form-control" id="eventLocation" placeholder="Example: The kitchen.">
-          </div>
-          <div class="form-group">
-            <label for="selectRoommate">Roommate(s):</label>
-            <select multiple class="custom-select" id="selectRommate">
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-              <option value="4">Four</option>
-              <option value="5">Five</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="eventNotes">Notes:</label>
-            <input type="text" class="form-control" id="eventNotes" placeholder="Example: Do the dishes.">
-          </div>
-          <label for="startEventDate">Start Date & Time:</label>
-          <div class="form-group form-inline">
-            <input type="date" class="form-control dateWidth" id="startEventDate">
-            <input type="time" class="form-control timeWidth" id="startEventTime">
-          </div>
-          <label for="endEventDate">End Date & Time:</label>
-          <div class="form-group form-inline">
-            <input type="date" class="form-control dateWidth" id="endEventDate">
-            <input type="time" class="form-control timeWidth" id="endEventTime">
-          </div>
-          <div class="form-group inline-form">
-            <button type="button" class="btn btn-danger">Delete</button>
-            <button type="button" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
+<body>
+  <h1><span class="badge badge-primary">New/Edit Event</span></h1>
+    <form>
+      <div class="form-group">
+        <label for="eventTitle">Title:</label>
+        <input type="text" class="form-control" id="eventTitle" placeholder="Example: Clean the kitchen.">
+      </div>
+      <div class="form-group">
+        <label for="eventLocation">Location:</label>
+        <input type="text" class="form-control" id="eventLocation" placeholder="Example: The kitchen.">
+      </div>
+      <div class="form-group">
+        <label for="selectRoommate">Roommate(s):</label>
+        <select multiple class="custom-select" id="selectRommate">
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="eventNotes">Notes:</label>
+        <input type="text" class="form-control" id="eventNotes" placeholder="Example: Do the dishes.">
+      </div>
+      <label for="startEventDate">Start Date & Time:</label>
+      <div class="form-group form-inline">
+        <input type="date" class="form-control dateWidth" id="startEventDate">
+        <input type="time" class="form-control timeWidth" id="startEventTime">
+      </div>
+      <label for="endEventDate">End Date & Time:</label>
+      <div class="form-group form-inline">
+        <input type="date" class="form-control dateWidth" id="endEventDate">
+        <input type="time" class="form-control timeWidth" id="endEventTime">
+      </div>
+      <div class="form-group inline-form">
+        <button type="button" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
   <script src="bootstrap.min.js"></script>
 </body>
 
