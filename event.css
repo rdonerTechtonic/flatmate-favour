@@ -6,3 +6,11 @@ button {
   float: right;
   margin: 5px;
 }
+
+.dateWidth{
+  width: 65%;
+}
+
+.timeWidth{
+  width: 35%;
+}

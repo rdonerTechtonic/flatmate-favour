@@ -9,12 +9,8 @@
   <title>Add/Edit Event</title>
 </head>
 
-<body>
-  <h1><span class="badge badge-primary"> New/Edit Event</span></h2>
-  <div class="container container-fluid">
-    <div class="row">
-      <div class="col-sm-1"></div>
-      <div class="col-sm-10">
+<body class="mx-5">
+  <h1><span class="badge badge-primary"> New/Edit Event</span></h1>
         <form>
           <div class="form-group">
             <label for="eventTitle">Title:</label>
@@ -37,31 +33,21 @@
             <label for="eventNotes">Notes:</label>
             <input type="text" class="form-control" id="eventNotes" placeholder="Example: Do the dishes.">
           </div>
-          <div class="form-group">
-            <label for="startEventDate">Start Date:</label>
-            <input type="date" class="form-control" id="startEventDate">
+          <label for="startEventDate">Start Date & Time:</label>
+          <div class="form-group form-inline">
+            <input type="date" class="form-control dateWidth" id="startEventDate">
+            <input type="time" class="form-control timeWidth" id="startEventTime">
           </div>
-          <div class="form-group">
-            <label for="startEventTime">Start Time:</label>
-            <input type="time" class="form-control" id="startEventTime">
-          </div>
-          <div class="form-group">
-            <label for="endEventDate">End Date:</label>
-            <input type="date" class="form-control" id="endEventDate">
-          </div>
-          <div class="form-group">
-            <label for="endEventTime">End Time:</label>
-            <input type="time" class="form-control" id="endEventTime">
+          <label for="endEventDate">End Date & Time:</label>
+          <div class="form-group form-inline">
+            <input type="date" class="form-control dateWidth" id="endEventDate">
+            <input type="time" class="form-control timeWidth" id="endEventTime">
           </div>
           <div class="form-group inline-form">
             <button type="button" class="btn btn-danger">Delete</button>
             <button type="button" class="btn btn-primary">Submit</button>
           </div>
         </form>
-      </div>
-      <div class="col-sm-1"></div>
-    </div>
-  </div>
   <script src="bootstrap.min.js"></script>
 </body>
 
