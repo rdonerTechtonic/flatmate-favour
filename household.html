@@ -7,25 +7,57 @@
     <link rel="stylesheet" href="household.css">
     <link rel="stylesheet" <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   </head>
-  <body>
+  <body class="mx-5">
+    <h1><span class="badge badge-primary">New/Edit Household</span></h1>
+      <form>
+        <div class="form-group">
+          <label for="houseName">House Name:</label>
+          <input type="text" class="form-control" id="houseName" placeholder="Example: Name of house or address">
+        </div>
+        <div class="form-group">
+          <label for="inviteRoommate">Invite Roommate:</label>
+          <input type="email" class="form-control" id="inviteRoommate" placeholder="Enter Google Email Address">
+        </div>
+        <div class="form-group">
+          <button type="button" class="centerButton btn btn-primary"><i class="fas fa-plus-circle"></i></button>
+        </div>
+        <div class="form-group">
+          <label for="selectRoommate">Remove Roommate:</label>
+          <select multiple class="custom-select" id="selectRoommate">
+            <option selected>Select Roommate</option>
+            <option value="1">Roommate One</option>
+            <option value="2">Roommate Two</option>
+            <option value="3">Roommate Three</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="button" class="centerButton btn btn-danger"><i class="fas fa-minus-circle"></i></button>
+        </div>
+        <div class="form-group inline-form">
+          <button type="button" class="rightButton btn btn-danger">Delete</button>
+          <button type="button" class="rightButton btn btn-primary">Submit</button>
+        </div>
+      </form>
+<!--
     <div class="container">
   <div class="row">
     <div class="col-sm">
 
-      <div class="text-center">
+      <div class="text-center">xs
       <img src="...jpg" class="rounded" alt="Logo">
-
-        <div class="button">
-          <a href="#">
-            <i class="fas fa-plus"></i>
-          </a>
-        </div>
-
+      <div class="button">
+        <a href="#">
+          <i class="fas fa-plus"></i>
+        </a>
+      </div>
       </div>
     </div>
   </div>
 </div>
       </div>
     </div>
+<button class="w3-button w3-circle w3-black">+</button>
+
+  -->
   </body>
 </html>
