@@ -1,6 +1,5 @@
-img {
-  height: 200px;
-  width: 200px;
+h1 {
+  text-align: center;
 }
 
 .text-center {
@@ -8,5 +7,16 @@ margin: 20px 20px 20px 20px;
 }
 
 i.fas fa-plus {
-margin: 20px 20px 20px 20px;
+margin: 50px 50px 50px 50px;
+}
+
+
+.centerButton {
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.rightButton {
+  float: right;
+  margin: 5px;
 }
