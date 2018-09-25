@@ -2,18 +2,12 @@ h1 {
   text-align: center;
 }
 
-.text-center {
-margin: 20px 20px 20px 20px;
+body {
+  margin: 0 5%;
 }
-
-i.fas fa-plus {
-margin: 50px 50px 50px 50px;
-}
-
 
 .centerButton {
-  margin-left: 50%;
-  margin-right: 50%;
+text-align: center;
 }
 
 .rightButton {
