@@ -5,10 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dashboard</title>
-  <link rel="stylesheet" href="dashboard.css">
+
   <link rel="stylesheet" <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <link rel="stylesheet" href="bootstrap.min.css">
-
+  <link rel="stylesheet" href="dashboard.css">
 </head>
 
 
@@ -16,7 +16,7 @@
 
   <img src="logo.png" alt="flatmate favour icon">
 
-  <body class="mx-5">
+  <body class="">
     <div class="container text-center" id="users">
       <a href="#">
         <i class="fas fa-users"></i>
@@ -49,38 +49,63 @@
     <div id="accordion">
 
       <div class="card">
-        <div class="card-header" id="headingOne">
+        <div class="card-header " id="headingOne">
           <div class="row">
-            <img id="profile" class="col-2 img-fluid rounded-circle" src="https://i.stack.imgur.com/dWrvS.png" alt="">
-            <button class="col-6 collapsed alert alert-success item" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="item1">
+            <div class="col-2 status">
+              <i class="fas fa-check"></i>
+            </div>
+            <button class="col-8 collapsed alert alert-success item" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" id="item1">
               Clean bathroom
             </button>
             <!-- </div> -->
-            <button class="col-3 ml-auto btn btn-outline-success" type="button" name="button" id="button1">Thank</button>
+            <button class="col-2 ml-auto btn btn-success" type="button" name="button" id="button1">Thank</button>
           </div>
         </div>
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-            <div class="row">
-              <div class="col-md-10">
-                <div class="dates">
-                  Dates: 9/25/18 2:40PM - 9/26/18 5:00PM
-                </div>
-                <div class="location">
-                  Location: Classroom
-                </div>
-              </div>
-              <div class="col-2">
-                <a href="event.html" class="ml-auto btn btn-outline-dark" type="button" name="button">Edit</a>
-              </div>
-            </div>
-          </div>
-          <div id="notes">
-            Bacon ipsum dolor amet porchetta flank short ribs, pork chop frankfurter salami turducken doner tongue tail andouille shankle pork loin picanha. Jerky bacon venison brisket filet mignon. Beef ribs burgdoggen bresaola ham picanha
-            alcatra
-            chuck. Porchetta pork loin shank boudin rump, corned beef kevin biltong turducken fatback. Buffalo ham hock rump flank meatball doner shankle pork chop sausage pork frankfurter pig kielbasa. Pork chop chuck ribeye spare ribs venison
-            pork
-            loin sausage kevin t-bone tenderloin.
+
+            <ul class="list-inline">
+              <h5>Acceptor(s): </h5>
+              <li class="list-inline-item">
+                Ryan
+              </li>
+              <li class="list-inline-item">
+                Renee
+              </li>
+            </ul>
+            <p>
+              <strong>
+                Requestor:
+              </strong>
+              Devin</p>
+            <p class="start-time">
+              <strong>
+                Begin:
+              </strong>
+              9/25/18 2:40PM
+            </p>
+            <p>
+              <strong>End: </strong>
+              9/26/18 5:00PM
+            </p>
+            <p class="location">
+              <strong>Location: </strong>
+              Classroom
+            </p>
+            </p>
+            <!-- <div class="col-2"> -->
+            <!-- </div>
+            </div> -->
+
+            <p class="mx-1">
+              Bacon ipsum dolor amet porchetta flank short ribs, pork chop frankfurter salami turducken doner tongue tail andouille shankle pork loin picanha. Jerky bacon venison brisket filet mignon. Beef ribs burgdoggen bresaola ham picanha
+              alcatra
+              chuck. Porchetta pork loin shank boudin rump, corned beef kevin biltong turducken fatback. Buffalo ham hock rump flank meatball doner shankle pork chop sausage pork frankfurter pig kielbasa. Pork chop chuck ribeye spare ribs venison
+              pork
+              loin sausage kevin t-bone tenderloin.
+            </p>
+            <a href="event.html" class="ml-auto btn btn-outline-dark" type="button" name="button">Edit</a>
+
           </div>
         </div>
       </div>
@@ -89,10 +114,13 @@
     <div class="card">
       <div class="card-header" id="headingTwo">
         <div class="row">
+          <div class="col-2 status">
+            <i class="far fa-handshake"></i>
+          </div>
           <button class="col-8 collapsed alert alert-danger item" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="item1">
               Water plants
             </button>
-          <button class="col-3 ml-auto btn btn-outline-danger" type="button" name="button" id="button1">Accept</button>
+          <button class="col-2 ml-auto btn btn-danger" type="button" name="button" id="button1">Accept</button>
         </div>
       </div>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -109,10 +137,13 @@
             A simple warning alert—check it out!
           </div> -->
         <div class="row">
+          <div class="col-2 status">
+            <i class="fas fa-hourglass-start"></i>
+          </div>
           <button class="col-8 collapsed alert alert-warning" role="alert" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="item1">
               Water Plants
             </button>
-          <button class="col-3 ml-auto btn btn-outline-warning col-2" type="button" name="button" id="button1">Done?</button>
+          <button class="col-2 ml-auto btn btn-warning col-2" type="button" name="button" id="button1">Done?</button>
         </div>
       </div>
       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
