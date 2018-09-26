@@ -6,15 +6,10 @@ body {
   margin: 0 5%;
 }
 
-button {
-  float: right;
-  margin: 0 5px;
-}
-
 .dateWidth{
-  width: 65%;
+  width: 55%;
 }
 
 .timeWidth{
-  width: 35%;
+  width: 45%;
 }
