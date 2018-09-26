@@ -10,12 +10,12 @@ img {
   display: block;
 }
 
-#item1 {
+/* #item1 {
   margin: 0;
   padding: 0;
-}
+} */
 
-#button1 {
+.button-complete {
   margin: 0 0 0 20px;
   padding: 0;
 }
@@ -27,22 +27,19 @@ img {
 }
 
 .status {
-  padding: 0 0;
+  padding: 0;
   text-align: center;
+  margin: 0;
 }
 
-#headingOne {
+.task-complete {
   background-color: #4bed71;
 }
 
-#headingTwo {
+.task-pending {
   background-color: #ee6c4d;
 }
 
-#headingThree {
+.task-accepted {
   background-color: #edaf4b;
-}
-
-.btn {
-  margin-left: 100px;
 }
