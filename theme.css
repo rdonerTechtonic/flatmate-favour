@@ -199,6 +199,21 @@ i {
   margin-right: 5px;
   color: #fff;
 }
+
+#profile {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 10%;
+}
+
+.row {
+  padding: 0px;
+}
+
+#button1 {
+  margin: 0;
+  padding: 0;
+}
 /*landing styling - link buttons, logo image */
 
 .centerText {
