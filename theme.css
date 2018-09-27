@@ -191,3 +191,17 @@ i {
   text-align: center;
   color: #fff;
 }
+
+.backgroundTag {
+  background-color: #e0fbfc;
+  margin: auto;
+  padding: auto;
+  background-image: url(wallpaper.jpg);
+  background-size: cover;
+}
+
+img {
+  height: 9.375em;
+  width: 9.375em;
+  margin: 4.375em 1.250em;
+}
