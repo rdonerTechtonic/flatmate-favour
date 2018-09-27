@@ -121,19 +121,19 @@ i {
 /* handshake icon */
 .fa-handshake {
   background-color: #ee6c4d;
-  padding: 0.375em 0.300em 0.375em 0.300em;
+  padding: ;
 }
 
 /* hourglass-start icon */
 .fa-hourglass-start {
   background-color: #edaf4b;
-  padding: 0.375em 0.625em 0.375em 0.625em;
+  padding: ;
 }
 
 /* check icon */
 .fa-check {
   background-color: #4bed71;
-  padding: 0.375em 0.438em 0.375em 0.375em;
+  padding: ;
 }
 
 /* alert in header */
@@ -183,6 +183,7 @@ i {
 /* card header */
 .card-header {
   padding: 0.313em 1.250em 0.313em 0.313em;
+  /*5px 20px 5px 5px;*/
   background-color: #e0fbfc;
   border-color: transparent;
   margin: 0;
