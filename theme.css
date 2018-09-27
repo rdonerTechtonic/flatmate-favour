@@ -14,9 +14,9 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 2em;
+  color: #fff;
 }
-
-h2 {}
 
 label {
   color: #e0fbfc;
@@ -25,6 +25,7 @@ label {
 .btn-danger {
   background-color: #ee6c4d;
   border-color: transparent;
+  color: #000;
 }
 
 .btn-primary {
@@ -68,7 +69,7 @@ i {
 
 /* was having issues with bootstrap margins/padding so I overwrote it */
 .button-complete {
-  margin: 0 0 0 20px;
+  margin: 0 0 0 1.250em;
   padding: 0;
 }
 
@@ -110,34 +111,34 @@ i {
 
 /* icons for each card */
 .fa-handshake, .fa-hourglass-start, .fa-check {
-  margin-top: 2px;
-  margin-left: 15px;
-  font-size: 27px;
+  margin-top: 0.125em;
+  margin-left: 0.938em;
+  font-size: 168.75%;
   color: #fff;
-  border-radius: 3px
+  border-radius: 0.188em;
 }
 
 /* handshake icon */
 .fa-handshake {
   background-color: #ee6c4d;
-  padding: 6px 3px 6px 3px;
+  padding: 0.375em 0.300em 0.375em 0.300em;
 }
 
 /* hourglass-start icon */
 .fa-hourglass-start {
   background-color: #edaf4b;
-  padding: 6px 10px 6px 10px;
+  padding: 0.375em 0.625em 0.375em 0.625em;
 }
 
 /* check icon */
 .fa-check {
   background-color: #4bed71;
-  padding: 6px 7px 6px 6px;
+  padding: 0.375em 0.438em 0.375em 0.375em;
 }
 
 /* alert in header */
 .alert {
-  margin: 3px 5px 3px 16px;
+  margin: 0.188em 0.313em 0.188em 1.000em;
   padding: 0;
   background-color: #98c1d9;
   color: #000;
@@ -174,22 +175,17 @@ i {
 /* drop down collapse */
 .drop-down {
   color: #fff;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 5px;
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+  padding-bottom: 0.313em;
 }
 
 /* card header */
 .card-header {
-  padding: 5px 20px 5px 5px;
+  padding: 0.313em 1.250em 0.313em 0.313em;
   background-color: #e0fbfc;
   border-color: transparent;
   margin: 0;
-}
-
-/* new plus circle */
-.fa-plus-circle {
-  color: #fff;
 }
 
 /*landing styling - link buttons, logo image */
