@@ -99,7 +99,106 @@ i {
   background-color: #edaf4b;
 }
 
+/* date label color */
+.dashboard-label {
+  color: #98c1d9;
+}
 
+/* card border and background */
+.card {
+  border-color: transparent;
+  background-color: #293241;
+}
+
+/* user icons at top */
+.fa-users, .fa-user, .fa-home, .fa-users-cog{
+  color: #e0fbfc;
+}
+
+/* icons for each card */
+.fa-handshake, .fa-hourglass-start, .fa-check {
+  margin-top: 2px;
+  font-size: 27px;
+  color: #fff;
+  border-radius: 3px
+}
+
+/* handshake icon */
+.fa-handshake {
+  background-color: #ee6c4d;
+  padding: 6px 3px 6px 3px;
+}
+
+/* hourglass-start icon */
+.fa-hourglass-start {
+  background-color: #edaf4b;
+  padding: 6px 10px 6px 10px;
+}
+
+/* check icon */
+.fa-check {
+  background-color: #4bed71;
+  padding: 6px 7px 6px 6px;
+}
+
+/* alert in header */
+.alert {
+  margin: 3px 5px 3px 16px;
+  padding: 0;
+  background-color: #98c1d9;
+  color: #000;
+  border-color: transparent;
+}
+
+/* thanks, accept, and done buttons text color and border*/
+.btn-success, .btn-warning, .btn-danger {
+  color: #000;
+  border-color: transparent;
+}
+
+/* button hover */
+.btn-success:hover, .btn-warning:hover, .btn-danger:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+/* thanks button bg color */
+.btn-success {
+  background-color: #4bed71;
+}
+
+/* thanks button bg color */
+.btn-warning {
+  background-color: #edaf4b;
+}
+
+/* thanks button bg color */
+.btn-danger {
+  background-color: #ee6c4d;
+}
+
+/* drop down collapse */
+.drop-down {
+  color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+}
+
+/* card header */
+.card-header {
+  padding: 5px 20px 5px 5px;
+  background-color: #e0fbfc;
+  border-color: transparent;
+  margin: 0;
+}
+
+/* new plus circle */
+.fa-plus-circle {
+  margin-top: 10px;
+  margin-right: 5px;
+  color: #fff;
+}
 /*landing styling - link buttons, logo image */
 
 .my-4 {
@@ -111,10 +210,4 @@ img {
   height: 150px;
   width: 150px;
   margin: 70px 20px;
-}
-
-.btn-secondary {
-  background-color: #ee6c4d;
-  border-color: transparent;
-  color: #000;
 }
