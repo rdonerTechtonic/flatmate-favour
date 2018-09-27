@@ -201,7 +201,8 @@ i {
 }
 /*landing styling - link buttons, logo image */
 
-.my-4 {
+.centerText {
+  margin: 16pt;
   text-align: center;
   color: #fff;
 }
