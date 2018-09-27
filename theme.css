@@ -78,10 +78,12 @@ i {
 }
 
 /* the far left icon in the card */
-.status {
+.header-icon {
   padding: 0;
   text-align: center;
   margin: 0;
+  height: 3em;
+  width: 3em;
 }
 
 /* colors for background of the heading section of each card */
