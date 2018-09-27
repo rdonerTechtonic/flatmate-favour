@@ -5,12 +5,3 @@ h1 {
 body {
   margin: 0 5%;
 }
-
-.centerButton {
-text-align: center;
-}
-
-.rightButton {
-  float: right;
-  margin: 5px;
-}

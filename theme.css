@@ -8,11 +8,113 @@
 #4bed71 UFO Green (green)
 */
 
+
+/* general styling including buttons, headers, font, background */
+
+body {
+  background-color: #3d5a80;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+
+}
+
+label {
+  color: #e0fbfc;
+}
+
+.btn-danger {
+  background-color: #ee6c4d;
+  border-color: transparent;
+}
+
+.btn-primary {
+  background-color: #4bed71;
+  border-color: transparent;
+  color: #000;
+}
+
 .centerButton {
 text-align: center;
 }
 
 .rightButton {
   text-align: right;
-  margin: 5px;
+  margin: 5pt;
+}
+
+/* event.html styling: form spacing */
+
+.dateWidth {
+  width: 55%;
+}
+
+.timeWidth {
+  width: 45%;
+}
+
+/* dashboard styling - card headers, card bodies, icons, thank/accept/done buttons, date picker, edit button */
+
+/* user icons */
+i {
+  font-size: 2rem;
+  color: black;
+}
+
+/* logo */
+#logo {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  display: block;
+}
+
+  /* was having issues with bootstrap margins/padding so I overwrote it */
+.button-complete {
+  margin: 0 0 0 20px;
+  padding: 0;
+}
+
+/* the far left icon in the card */
+.status {
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+/* colors for background of the heading section of each card */
+.task-complete {
+  background-color: #4bed71;
+}
+
+.task-pending {
+  background-color: #ee6c4d;
+}
+
+.task-accepted {
+  background-color: #edaf4b;
+}
+
+
+/*landing styling - link buttons, logo image */
+
+.my-4 {
+  text-align: center;
+  color: #fff;
+}
+
+img {
+  height: 150px;
+  width: 150px;
+  margin: 70px 20px;
+}
+
+.btn-secondary {
+  background-color: #ee6c4d;
+  border-color: transparent;
+  color: #000;
 }
