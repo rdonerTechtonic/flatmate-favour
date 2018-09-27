@@ -7,10 +7,7 @@
 #ee6c4d Light Red Ochre (red)
 #4bed71 UFO Green (green)
 */
-
-
 /* general styling including buttons, headers, font, background */
-
 body {
   background-color: #3d5a80;
 }
@@ -19,9 +16,7 @@ h1 {
   text-align: center;
 }
 
-h2 {
-
-}
+h2 {}
 
 label {
   color: #e0fbfc;
@@ -48,7 +43,6 @@ label {
 }
 
 /* event.html styling: form spacing */
-
 .dateWidth {
   width: 55%;
 }
@@ -58,7 +52,6 @@ label {
 }
 
 /* dashboard styling - card headers, card bodies, icons, thank/accept/done buttons, date picker, edit button */
-
 /* user icons */
 i {
   font-size: 2rem;
@@ -67,13 +60,13 @@ i {
 
 /* logo */
 #logo {
-  width: 100px;
-  height: 100px;
-  margin: 20px auto;
+  width: 6.250em;
+  height: 6.250em;
+  margin: 1.250em auto;
   display: block;
 }
 
-  /* was having issues with bootstrap margins/padding so I overwrote it */
+/* was having issues with bootstrap margins/padding so I overwrote it */
 .button-complete {
   margin: 0 0 0 20px;
   padding: 0;
@@ -111,7 +104,7 @@ i {
 }
 
 /* user icons at top */
-.fa-users, .fa-user, .fa-home, .fa-users-cog{
+.fa-users, .fa-user, .fa-home, .fa-users-cog {
   color: #e0fbfc;
 }
 
@@ -200,8 +193,8 @@ i {
   margin-right: 5px;
   color: #fff;
 }
-/*landing styling - link buttons, logo image */
 
+/*landing styling - link buttons, logo image */
 .centerText {
   margin: 16pt;
   text-align: center;
@@ -209,7 +202,7 @@ i {
 }
 
 img {
-  height: 150px;
-  width: 150px;
-  margin: 70px 20px;
+  height: 9.375em;
+  width: 9.375em;
+  margin: 4.375em 1.250em;
 }
