@@ -40,7 +40,7 @@ label {
 
 .rightButton {
   text-align: right;
-  margin: 5pt;
+  margin: 2%;
 }
 
 /* event.html styling: form spacing */
@@ -111,8 +111,6 @@ i {
 
 /* icons for each card */
 .fa-handshake, .fa-hourglass-start, .fa-check {
-  margin-top: 0.125em;
-  margin-left: 0.938em;
   font-size: 168.75%;
   color: #fff;
   border-radius: 0.188em;
@@ -121,24 +119,22 @@ i {
 /* handshake icon */
 .fa-handshake {
   background-color: #ee6c4d;
-  padding: ;
 }
 
 /* hourglass-start icon */
 .fa-hourglass-start {
   background-color: #edaf4b;
-  padding: ;
 }
 
 /* check icon */
 .fa-check {
   background-color: #4bed71;
-  padding: ;
 }
 
 /* alert in header */
 .alert {
-  margin: 0.188em 0.313em 0.188em 1.000em;
+  left: 5%;
+  margin: 0;
   padding: 0;
   background-color: #98c1d9;
   color: #000;
@@ -194,10 +190,4 @@ i {
   margin: 16pt;
   text-align: center;
   color: #fff;
-}
-
-img {
-  height: 9.375em;
-  width: 9.375em;
-  margin: 4.375em 1.250em;
 }
