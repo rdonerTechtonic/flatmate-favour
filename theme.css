@@ -18,6 +18,10 @@ h1 {
   color: #fff;
 }
 
+h2{
+  font-size: 1.5em;
+}
+
 label {
   color: #e0fbfc;
 }
@@ -118,16 +122,19 @@ i {
 
 /* handshake icon */
 .fa-handshake {
+  margin-left: 50%;
   background-color: #ee6c4d;
 }
 
 /* hourglass-start icon */
 .fa-hourglass-start {
+  margin-left: 50%;
   background-color: #edaf4b;
 }
 
 /* check icon */
 .fa-check {
+  margin-left: 50%;
   background-color: #4bed71;
 }
 
