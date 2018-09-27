@@ -13,7 +13,7 @@
 
 <!--holds logo and icons  -->
 <div class="container">
-  <img src="logo.png" alt="flatmate favour icon">
+  <img src="logo.png" alt="flatmate favour icon" id="logo">
 
   <body>
     <div class="text-center">
@@ -33,7 +33,7 @@
         <i class="fas fa-home"></i>
       </a>
       <a href="household.html">
-      <i class="fas fa-users-cog"></i>
+        <i class="fas fa-users-cog"></i>
       </a>
     </div>
 
@@ -58,17 +58,21 @@
             </div>
 
             <!-- title button that links to dropdown -->
-            <button class="col-8 collapsed alert alert-success status" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Clean bathroom
-            </button>
+            <div class="col-6">
+              <button class="collapsed alert alert-success status" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Clean bathroom
+              </button>
+            </div>
 
             <!-- action button to thank,accept,complete task -->
-            <button class="col-2 ml-auto btn btn-success button-complete" type="button" name="button">Thank</button>
+            <div class="col-3">
+              <button class="ml-auto btn btn-success button-complete" type="button" name="button">Thank</button>
+            </div>
           </div>
         </div>
 
         <!-- collapsable information for event -->
-        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div id="collapseOne" class="collapse drop-down" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
 
 
@@ -106,10 +110,16 @@
           <div class="col-2 status">
             <i class="far fa-handshake"></i>
           </div>
-          <button class="col-8 collapsed alert alert-danger status" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="item1">
+
+          <div class="col-6">
+            <button class="collapsed alert alert-danger status" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="item1">
               Water plants
             </button>
-          <button class="col-2 ml-auto btn btn-danger status" type="button" name="button">Accept</button>
+          </div>
+
+          <div class="col-3">
+            <button class="ml-auto btn btn-danger status" type="button" name="button">Accept</button>
+          </div>
         </div>
       </div>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -129,10 +139,16 @@
           <div class="col-2 status">
             <i class="fas fa-hourglass-start"></i>
           </div>
-          <button class="col-8 collapsed alert alert-warning status" role="alert" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="item1">
+
+          <div class="col-6">
+            <button class="collapsed alert alert-warning status" role="alert" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="item1">
               Water Plants
             </button>
-          <button class="col-2 ml-auto btn btn-warning col-2 status" type="button" name="button">Done?</button>
+          </div>
+
+          <div class="col-3">
+            <button class="col-2 ml-auto btn btn-warning status" type="button" name="button">Done?</button>
+          </div>
         </div>
       </div>
       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -146,8 +162,8 @@
 </div>
 
 <a class="float-right" href="event.html">
-      <i class="fas fa-plus-circle"></i>
-    </a>
+  <i class="fas fa-plus-circle"></i>
+</a>
 
 
 </div>
