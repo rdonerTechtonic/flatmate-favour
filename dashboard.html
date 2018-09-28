@@ -38,7 +38,9 @@
     <!--holds date picker  -->
     <form>
       <div class="form-group">
-        <label for="formGroupExampleInput2" class="dashboard-label">Date:</label>
+        <label for="formGroupExampleInput2" class="dashboard-label">
+          Date:
+        </label>
         <input type="date" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
       </div>
     </form>
@@ -61,10 +63,11 @@
               Clean bathroom
             </button>
 
-
             <!-- action button to thank,accept,complete task -->
 
-            <button class="col-3 ml-auto btn btn-success button-complete" type="button" name="button">Thanks</button>
+            <button class="col-3 ml-auto btn btn-success button-complete" type="button" name="button">
+              Thanks
+            </button>
 
           </div>
         </div>
@@ -73,7 +76,9 @@
         <div id="collapseOne" class="collapse drop-down" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
             <ul class="list-inline">
-              <h2>Acceptor(s):</h2>
+              <h2>
+                Acceptor(s):
+              </h2>
               <li class="list-inline-item">Ryan</li>
               <li class="list-inline-item">Renee</li>
             </ul>
@@ -96,139 +101,171 @@
             <div>
               <h2>Notes:</h2>
               <p>
-                Bacon ipsum dolor amet porchetta flank short ribs, pork chop frankfurter salami turducken doner tongue tail andouille shankle pork loin picanha. Jerky bacon venison brisket filet mignon. Beef ribs burgdoggen bresaola ham picanha
-                alcatra
-                chuck. Porchetta pork loin shank boudin rump, corned beef kevin biltong turducken fatback. Buffalo ham hock rump flank meatball doner shankle pork chop sausage pork frankfurter pig kielbasa. Pork chop chuck ribeye spare ribs venison
-                pork
-                loin sausage kevin t-bone tenderloin.
+                Bacon ipsum dolor amet porchetta flank short ribs, pork chop
+                frankfurter salami turducken doner tongue tail andouille
+                shankle pork loin picanha. Jerky bacon venison brisket filet
+                mignon. Beef ribs burgdoggen bresaola ham picanha alcatra chuck.
+                Porchetta pork loin shank boudin rump, corned beef kevin
+                biltong turducken fatback. Buffalo ham hock rump flank meatball
+                doner shankle pork chop sausage pork frankfurter pig kielbasa.
+                Pork chop chuck ribeye spare ribs venison pork loin sausage
+                kevin t-bone tenderloin.
               </p>
             </div>
-            <a href="event.html" class="ml-auto btn btn-light" type="button" name="button">Edit</a>
+            <a href="event.html" class="ml-auto btn btn-light" type="button" name="button">
+              Edit
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header task-accepted" id="headingTwo">
+          <div class="row">
+            <div class="col-2 status">
+              <img src="Handshake-Icon.png" alt="flatmate favour icon" class="header-icon">
+            </div>
+
+            <button class="col-6 collapsed alert alert-danger status" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="item1">
+              Water plants
+            </button>
+
+            <button class="col-3 ml-auto btn btn-danger status" type="button" name="button">
+              Accept
+            </button>
+
+          </div>
+        </div>
+        <div id="collapseTwo" class="collapse drop-down" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="list-inline">
+              <h2>
+                Acceptor(s):
+              </h2>
+              <li class="list-inline-item">Ryan</li>
+              <li class="list-inline-item">Renee</li>
+            </ul>
+            <div>
+              <h2>Requestor:</h2>
+              <p>Devin</p>
+            </div>
+            <div>
+              <h2>Begin:</h2>
+              <p>9/25/18 2:40PM</p>
+            </div>
+            <div>
+              <h2>End:</h2>
+              <p>9/26/18 5:00PM</p>
+            </div>
+            <div>
+              <h2>Location:</h2>
+              <p>Classroom</p>
+            </div>
+            <div>
+              <h2>Notes:</h2>
+              <p>
+                Bacon ipsum dolor amet porchetta flank short ribs, pork chop
+                frankfurter salami turducken doner tongue tail andouille shankle
+                pork loin picanha. Jerky bacon venison brisket filet mignon.
+                Beef ribs burgdoggen bresaola ham picanha alcatra chuck.
+                Porchetta pork loin shank boudin rump, corned beef kevin biltong
+                turducken fatback. Buffalo ham hock rump flank meatball doner
+                shankle pork chop sausage pork frankfurter pig kielbasa. Pork
+                chop chuck ribeye spare ribs venison pork loin sausage kevin
+                t-bone tenderloin.
+              </p>
+            </div>
+            <a href="event.html" class="ml-auto btn btn-light" type="button" name="button">
+              Edit
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header task-pending" id="headingThree">
+          <!-- <div class="alert alert-warning" role="alert">
+              A simple warning alert—check it out!
+            </div> -->
+          <div class="row">
+            <div class="col-2 status">
+              <img src="Hourglass-Icon.png" alt="flatmate favour icon" class="header-icon">
+            </div>
+
+            <button class="col-6 collapsed alert alert-warning status" role="alert" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="item1">
+              Water Plants
+            </button>
+
+            <button class="col-3 ml-auto btn btn-warning status" type="button" name="button">
+              Done?
+            </button>
+
+          </div>
+        </div>
+        <div id="collapseThree" class="collapse drop-down" aria-labelledby="headingThree" data-parent="#accordion">
+          <div class="card-body">
+            <ul class="list-inline">
+              <h2>
+                Acceptor(s):
+              </h2>
+              <li class="list-inline-item">Ryan</li>
+              <li class="list-inline-item">Renee</li>
+            </ul>
+            <div>
+              <h2>Requestor:</h2>
+              <p>Devin</p>
+            </div>
+            <div>
+              <h2>Begin:</h2>
+              <p>9/25/18 2:40PM</p>
+            </div>
+            <div>
+              <h2>End:</h2>
+              <p>9/26/18 5:00PM</p>
+            </div>
+            <div>
+              <h2>Location:</h2>
+              <p>Classroom</p>
+            </div>
+            <div>
+              <h2>Notes:</h2>
+              <p>
+                Bacon ipsum dolor amet porchetta flank short ribs, pork chop
+                frankfurter salami turducken doner tongue tail andouille shankle
+                pork loin picanha. Jerky bacon venison brisket filet mignon.
+                Beef ribs burgdoggen bresaola ham picanha alcatra chuck.
+                Porchetta pork loin shank boudin rump, corned beef kevin biltong
+                turducken fatback. Buffalo ham hock rump flank meatball doner
+                shankle pork chop sausage pork frankfurter pig kielbasa. Pork
+                chop chuck ribeye spare ribs venison porkloin sausage kevin
+                t-bone tenderloin.
+              </p>
+            </div>
+            <a href="event.html" class="ml-auto btn btn-light" type="button" name="button">
+              Edit
+            </a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-header task-accepted" id="headingTwo">
-        <div class="row">
-          <div class="col-2 status">
-            <img src="Handshake-Icon.png" alt="flatmate favour icon" class="header-icon">
-          </div>
-
-
-          <button class="col-6 collapsed alert alert-danger status" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="item1">
-            Water plants
-          </button>
-
-
-
-          <button class="col-3 ml-auto btn btn-danger status" type="button" name="button">Accept</button>
-
-        </div>
-      </div>
-      <div id="collapseTwo" class="collapse drop-down" aria-labelledby="headingTwo" data-parent="#accordion">
-        <div class="card-body">
-          <ul class="list-inline">
-            <h2>Acceptor(s):</h2>
-            <li class="list-inline-item">Ryan</li>
-            <li class="list-inline-item">Renee</li>
-          </ul>
-          <div>
-            <h2>Requestor:</h2>
-            <p>Devin</p>
-          </div>
-          <div>
-            <h2>Begin:</h2>
-            <p>9/25/18 2:40PM</p>
-          </div>
-          <div>
-            <h2>End:</h2>
-            <p>9/26/18 5:00PM</p>
-          </div>
-          <div>
-            <h2>Location:</h2>
-            <p>Classroom</p>
-          </div>
-          <div>
-            <h2>Notes:</h2>
-            <p>
-              Bacon ipsum dolor amet porchetta flank short ribs, pork chop frankfurter salami turducken doner tongue tail andouille shankle pork loin picanha. Jerky bacon venison brisket filet mignon. Beef ribs burgdoggen bresaola ham picanha
-              alcatra
-              chuck. Porchetta pork loin shank boudin rump, corned beef kevin biltong turducken fatback. Buffalo ham hock rump flank meatball doner shankle pork chop sausage pork frankfurter pig kielbasa. Pork chop chuck ribeye spare ribs venison
-              pork
-              loin sausage kevin t-bone tenderloin.
-            </p>
-          </div>
-          <a href="event.html" class="ml-auto btn btn-light" type="button" name="button">Edit</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header task-pending" id="headingThree">
-        <!-- <div class="alert alert-warning" role="alert">
-            A simple warning alert—check it out!
-          </div> -->
-        <div class="row">
-          <div class="col-2 status">
-            <img src="Hourglass-Icon.png" alt="flatmate favour icon" class="header-icon">
-          </div>
-
-
-          <button class="col-6 collapsed alert alert-warning status" role="alert" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="item1">
-            Water Plants
-          </button>
-
-          <button class="col-3 ml-auto btn btn-warning status" type="button" name="button">Done?</button>
-
-        </div>
-      </div>
-      <div id="collapseThree" class="collapse drop-down" aria-labelledby="headingThree" data-parent="#accordion">
-        <div class="card-body">
-          <ul class="list-inline">
-            <h2>Acceptor(s):</h2>
-            <li class="list-inline-item">Ryan</li>
-            <li class="list-inline-item">Renee</li>
-          </ul>
-          <div>
-            <h2>Requestor:</h2>
-            <p>Devin</p>
-          </div>
-          <div>
-            <h2>Begin:</h2>
-            <p>9/25/18 2:40PM</p>
-          </div>
-          <div>
-            <h2>End:</h2>
-            <p>9/26/18 5:00PM</p>
-          </div>
-          <div>
-            <h2>Location:</h2>
-            <p>Classroom</p>
-          </div>
-          <div>
-            <h2>Notes:</h2>
-            <p>
-              Bacon ipsum dolor amet porchetta flank short ribs, pork chop frankfurter salami turducken doner tongue tail andouille shankle pork loin picanha. Jerky bacon venison brisket filet mignon. Beef ribs burgdoggen bresaola ham picanha
-              alcatra
-              chuck. Porchetta pork loin shank boudin rump, corned beef kevin biltong turducken fatback. Buffalo ham hock rump flank meatball doner shankle pork chop sausage pork frankfurter pig kielbasa. Pork chop chuck ribeye spare ribs venison
-              pork
-              loin sausage kevin t-bone tenderloin.
-            </p>
-          </div>
-          <a href="event.html" class="ml-auto btn btn-light" type="button" name="button">Edit</a>
-        </div>
-      </div>
-    </div>
     <div class="form-group rightButton">
-      <button type="button" class="btn btn-primary"><i class="fas fa-plus-circle"></i></button>
+      <button type="button" class="btn btn-primary">
+        <i class="fas fa-plus-circle"></i>
+      </button>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+  </body>
+
+</div>
 
 </html>

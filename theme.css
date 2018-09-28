@@ -13,9 +13,9 @@ body {
 }
 
 h1 {
-  text-align: center;
-  font-size: 2em;
   color: #fff;
+  font-size: 2em;
+  text-align: center;
 }
 
 h2{
@@ -43,8 +43,8 @@ label {
 }
 
 .rightButton {
-  text-align: right;
   margin: 2%;
+  text-align: right;
 }
 
 /* event.html styling: form spacing */
@@ -59,16 +59,16 @@ label {
 /* dashboard styling - card headers, card bodies, icons, thank/accept/done buttons, date picker, edit button */
 /* user icons */
 i {
-  font-size: 2rem;
   color: black;
+  font-size: 2rem;
 }
 
 /* logo */
 #logo {
-  width: 6.250em;
+  display: block;
   height: 6.250em;
   margin: 1.250em auto;
-  display: block;
+  width: 6.250em;
 }
 
 /* was having issues with bootstrap margins/padding so I overwrote it */
@@ -79,10 +79,10 @@ i {
 
 /* the far left icon in the card */
 .header-icon {
+  height: 3em;
+  margin: 0;
   padding: 0;
   text-align: center;
-  margin: 0;
-  height: 3em;
   width: 3em;
 }
 
@@ -106,8 +106,8 @@ i {
 
 /* card border and background */
 .card {
-  border-color: transparent;
   background-color: #293241;
+  border-color: transparent;
 }
 
 /* user icons at top */
@@ -117,49 +117,49 @@ i {
 
 /* icons for each card */
 .fa-handshake, .fa-hourglass-start, .fa-check {
-  font-size: 168.75%;
-  color: #fff;
   border-radius: 0.188em;
+  color: #fff;
+  font-size: 168.75%;
 }
 
 /* handshake icon */
 .fa-handshake {
-  margin-left: 50%;
   background-color: #ee6c4d;
+  margin-left: 50%;
 }
 
 /* hourglass-start icon */
 .fa-hourglass-start {
-  margin-left: 50%;
   background-color: #edaf4b;
+  margin-left: 50%;
 }
 
 /* check icon */
 .fa-check {
-  margin-left: 50%;
   background-color: #4bed71;
+  margin-left: 50%;
 }
 
 /* alert in header */
 .alert {
+  background-color: #98c1d9;
+  border-color: transparent;
+  color: #000;
   left: 5%;
   margin: 0;
   padding: 0;
-  background-color: #98c1d9;
-  color: #000;
-  border-color: transparent;
 }
 
 /* thanks, accept, and done buttons text color and border*/
 .btn-success, .btn-warning, .btn-danger {
-  color: #000;
   border-color: transparent;
+  color: #000;
 }
 
 /* button hover */
 .btn-success:hover, .btn-warning:hover, .btn-danger:hover {
-  color: #000;
   background-color: #fff;
+  color: #000;
 }
 
 /* thanks button bg color */
@@ -180,37 +180,37 @@ i {
 /* drop down collapse */
 .drop-down {
   color: #fff;
+  padding-bottom: 0.313em;
   padding-left: 0.625em;
   padding-right: 0.625em;
-  padding-bottom: 0.313em;
 }
 
 /* card header */
 .card-header {
-  padding: 0.313em 1.250em 0.313em 0.313em;
-  /*5px 20px 5px 5px;*/
   background-color: #e0fbfc;
   border-color: transparent;
   margin: 0;
+  padding: 0.313em 1.250em 0.313em 0.313em;
+  /*5px 20px 5px 5px;*/
 }
 
 /*landing styling - link buttons, logo image */
 .centerText {
+  color: #fff;
   margin: 16pt;
   text-align: center;
-  color: #fff;
 }
 
 .backgroundTag {
   background-color: #e0fbfc;
-  margin: auto;
-  padding: auto;
   background-image: url(Flatmate-Favour-Wallpaper-Fixed.jpg);
   background-size: cover;
+  margin: auto;
+  padding: auto;
 }
 
 img {
   height: 9.375em;
-  width: 9.375em;
   margin: 4.375em 1.250em;
+  width: 9.375em;
 }
