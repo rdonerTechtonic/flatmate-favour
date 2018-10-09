@@ -17,9 +17,7 @@ function Event(obj) {
   this.eventRoommates = obj.eventRoommates;
   this.eventNotes = obj.eventNotes;
   this.eventStartDate = obj.eventStartDate;
-  this.eventStartDate = obj.eventStartDate;
   this.eventEndDate = obj.eventEndDate;
-  this.eventEndTime = obj.eventEndTime;
   this.eventStatus = obj.eventStatus;
   this.eventPostedBy = obj.eventPostedBy;
 }
@@ -59,13 +57,65 @@ function House(obj) {
 //       localStorage.setItem("events", JSON.stringify("testSave"));
 //     }
 
+
+
+
+
+//Test code to create a new house, uncomment and run in console.
+// new House (
 // {
-// eventTitle: "testTitle"
-// eventLocation: "testLocations"
-// eventRoommates: ["testEmail1, testEmail2"]
-// eventNotes: "testNotes"
-// eventStartDate: {date object}
-// eventStartTime: {time object}
-// eventEndDate: {date object}
-// eventEndTime: {time object}
+//   HouseName:  "testHouseName",
+//   HouseOwner: "owner@gmail.com",
+//   HouseRoomates:  ["roommate1@gmail.com", "roommate2@gmail.com"]
 // }
+// )
+
+//Test code to create 4 new events, uncomment and run in console.
+// testHousehold.ffEvents[0] = new Event(
+// {
+//   eventTitle: "testTitle0",
+//   eventLocation: "testLocation0",
+//   eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+//   eventNotes: "testNotes0",
+//   eventStartDate: "2018-10-09T21:04:47.678Z",
+//   eventEndDate: "2018-10-09T23:04:47.678Z",
+//   eventStatus: "accepted",
+//   eventPostedBy: "devin"
+// })
+//
+// testHousehold.ffEvents[1] = new Event(
+// {
+//   eventTitle: "testTitle1",
+//   eventLocation: "testLocation1",
+//   eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+//   eventNotes: "testNotes1",
+//   eventStartDate: "2018-10-10T21:04:47.678Z",
+//   eventEndDate: "2018-10-10T22:04:47.678Z",
+//   eventStatus: "pending",
+//   eventPostedBy: "ryan"
+// })
+//
+//
+// testHousehold.ffEvents[2] = new Event(
+// {
+//   eventTitle: "testTitle2",
+//   eventLocation: "testLocation2",
+//   eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+//   eventNotes: "testNotes2",
+//   eventStartDate: "2018-10-11T19:04:47.678Z",
+//   eventEndDate: "2018-10-11T21:04:47.678Z",
+//   eventStatus: "done",
+//   eventPostedBy: "ryan"
+// })
+//
+// testHousehold.ffEvents[3] = new Event(
+// {
+//   eventTitle: "testTitle3",
+//   eventLocation: "testLocation3",
+//   eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+//   eventNotes: "testNotes3",
+//   eventStartDate: "2018-10-12T18:04:47.678Z",
+//   eventEndDate: "2018-10-12T23:04:47.678Z",
+//   eventStatus: "thanked",
+//   eventPostedBy: "ryan"
+// })
