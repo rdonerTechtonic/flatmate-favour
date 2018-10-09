@@ -25,6 +25,7 @@ function Event(obj) {
 function House(obj) {
   this.HouseName = obj.HouseName;
   this.HouseRoomates = obj.HouseRoomates;
+  this.HouseOwner = obj.HouseOwner;
 }
 
 //  Function to [description here]
@@ -62,6 +63,7 @@ function House(obj) {
 
 
 //Test code to create a new house, uncomment and run in console.
+
 // new House (
 // {
 //   HouseName:  "testHouseName",
@@ -70,7 +72,9 @@ function House(obj) {
 // }
 // )
 
-//Test code to create 4 new events, uncomment and run in console.
+// Test code to create 4 new events, uncomment and run in console.
+
+
 // testHousehold.ffEvents[0] = new Event(
 // {
 //   eventTitle: "testTitle0",
