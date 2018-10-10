@@ -1,6 +1,50 @@
 $(document).ready(init);
 
 function init() {
+
+  var status = {
+    accepted: {
+      icon: {
+        src: "Image-Sources/Hourglass-Icon.png",
+        alt: "hourglass icon"
+      },
+      button: {
+        class: "btn-warning",
+        text: "Done?"
+      }
+    },
+    pending: {
+      icon: {
+        src: "Image-Sources/Handshake-Icon.png",
+        alt: "handshake icon"
+        },
+      button: {
+        class: "btn-danger",
+        text: "Accept"
+      }
+    },
+    done: {
+      icon: {
+          src: "Image-Sources/Check-Icon.png",
+          alt: "check-icon"
+        },
+      button: {
+        class: "btn-success button-complete",
+        text: "Thanks"
+      }
+    },
+    thanked: {
+      icon: {
+          src: "Image-Sources/Check-Icon.png",
+          alt: "check-icon"
+        },
+      button: {
+        class: "btn-success button-complete",
+        text: "Thanked!"
+      }
+    }
+  }
+
   //eventually testHousehold will be dynamically replaced depending on user login
   window.testHousehold = new flatMateFavour();
   console.log('init runs');
@@ -21,7 +65,7 @@ function init() {
     eventNotes: "testNotes0",
     eventStartDate: "2018-10-09T21:04:47.678Z",
     eventEndDate: "2018-10-09T23:04:47.678Z",
-    eventStatus: "accepted",
+    eventStatus: status.accepted.icon.src,
     eventPostedBy: "devin"
   })
   console.log("Test Event Data Loaded");
@@ -64,6 +108,10 @@ function init() {
   })
   console.log("Test Event Data Loaded");
 }
+
+
+
+
 
 function flatMateFavour() {
   this.ffEvents = new Array();
@@ -139,7 +187,7 @@ function House(obj) {
 //   eventNotes: "testNotes0",
 //   eventStartDate: "2018-10-09T21:04:47.678Z",
 //   eventEndDate: "2018-10-09T23:04:47.678Z",
-//   eventStatus: "accepted",
+//   eventStatus: status.thanked,
 //   eventPostedBy: "devin"
 // })
 //

@@ -5,48 +5,48 @@ flatMateFavour.prototype.getEvents = function() {
   // }
   // this.ffEvents[0];
   // console.log(this.ffDashboard);
-var status = {
-  accepted: {
-    icon: {
-      src: "Image-Sources/Hourglass-Icon.png",
-      alt: "hourglass icon"
-    },
-    button: {
-      class: "btn-warning",
-      text: "Done?"
-    }
-  },
-  pending: {
-    icon: {
-      src: "Image-Sources/Handshake-Icon.png",
-      alt: "handshake icon"
-      },
-    button: {
-      class: "btn-danger",
-      text: "Accept"
-    }
-  }
-  done: {
-    icon: {
-        src: "Image-Sources/Check-Icon.png",
-        alt: "check-icon"
-      },
-    button: {
-      class: "btn-success button-complete",
-      text: "Thanks"
-    }
-  }
-  thanked: {
-    icon: {
-        src: "Image-Sources/Check-Icon.png",
-        alt: "check-icon"
-      },
-    button: {
-      class: "btn-success button-complete",
-      text: "Thanked!"
-    }
-  }
-}
+// var status = {
+//   accepted: {
+//     icon: {
+//       src: "Image-Sources/Hourglass-Icon.png",
+//       alt: "hourglass icon"
+//     },
+//     button: {
+//       class: "btn-warning",
+//       text: "Done?"
+//     }
+//   },
+//   pending: {
+//     icon: {
+//       src: "Image-Sources/Handshake-Icon.png",
+//       alt: "handshake icon"
+//       },
+//     button: {
+//       class: "btn-danger",
+//       text: "Accept"
+//     }
+//   }
+//   done: {
+//     icon: {
+//         src: "Image-Sources/Check-Icon.png",
+//         alt: "check-icon"
+//       },
+//     button: {
+//       class: "btn-success button-complete",
+//       text: "Thanks"
+//     }
+//   }
+//   thanked: {
+//     icon: {
+//         src: "Image-Sources/Check-Icon.png",
+//         alt: "check-icon"
+//       },
+//     button: {
+//       class: "btn-success button-complete",
+//       text: "Thanked!"
+//     }
+//   }
+// }
   // var newCard = "<div class='card' id='newCard'></div>"
   // $.each(this.ffEvents, function(i, value) {
     var newCard ='\
@@ -54,12 +54,12 @@ var status = {
         <div class="card-header task-accepted" id="headingTwo">\
           <div class="row">\
             <div class="col-2 status">\
-              <img src="Image-Sources/Handshake-Icon.png" alt="flatmate favour icon" class="header-icon">\
+              <img src=' + this.ffEvents[i].eventStatus + ' alt="flatmate favour icon" class="header-icon">\
           </div>\
               <button class="col-6 collapsed alert alert-danger status" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseTwo" id="item1">\
             '+ this.ffEvents[i].eventTitle + '\
           </button>\
-              <button class="col-3 ml-auto btn btn-danger' + ffEvents[i].status[i] + '" type="button" name="button">\
+              <button class="col-3 ml-auto btn btn-danger" type="button" name="button">\
             Accept\
           </button>\
             </div>\
