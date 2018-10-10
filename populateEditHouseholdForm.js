@@ -1,8 +1,5 @@
-$(document).ready(autoFillHouseholdForm);
-
 function autoFillHouseholdForm (houseToFillWith) {
-  $("houseName[type=text].tags").val(houseToFillWith.HouseName);
-  $("inviteRoommate[type=text].tags").val(houseToFillWith.HouseRoomates);
+  $("#houseName").val(houseToFillWith.HouseName);
 };
 
 

@@ -4,9 +4,6 @@
 
 //function that is called when button is pressed
 //function that populates edit form with information
-
-$(document).ready(autoFill);
-
 function autoFill (eventToFillWith) {
   $('#eventTitle').val(eventToFillWith.eventTitle);
   $('#eventLocation').val(eventToFillWith.eventLocation);
