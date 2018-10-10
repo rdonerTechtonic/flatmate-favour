@@ -115,8 +115,9 @@ function init() {
   })
   console.log("Test Event Data Loaded");
 
-  testHousehold.getEvents();
-  testHousehold.changeStatus();
+//  testHousehold.getEvents();
+//  testHousehold.changeStatus();
+  testHousehold.updateRoommateSelector();
 }
 
 
@@ -143,6 +144,15 @@ function Event(obj) {
 function House(obj) {
   this.HouseName = obj.HouseName;
   this.HouseRoomates = obj.HouseRoomates;
+}
+
+flatMateFavour.prototype.updateRoommateSelector = function () {
+  $('#selectRoommate').children().remove();
+  for (var i = 0; i < testHousehold.ffHouse.HouseRoomates.length; i++) {
+    var roommateSelect = testHousehold.ffHouse.HouseRoomates[i];
+      var appendString = '<option value="' + i + '">' + testHousehold.ffHouse.HouseRoomates[i] + '</option>'
+      $('#selectRoommate').append(appendString);
+  }
 }
 
 //  Function to [description here]

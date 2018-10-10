@@ -23,14 +23,3 @@ flatMateFavour.prototype.grabNewEventData = function (eventPoster) {
   })
   return newEvent;
 };
-
-
-//This is a function to populate the New/Edit event and New/Edit household
-flatMateFavour.prototype.updateRoommateSelector = function () {
-  $('#selectRoommate').children().remove()
-  for (var i = 0; i < testHousehold.ffHouse.HouseRoomates.length; i++) {
-    var roommateSelect = testHousehold.ffHouse.HouseRoomates[i];
-      var appendString = '<option value="' + i + '">' + testHousehold.ffHouse.HouseRoomates[i] + '</option>'
-      $('#selectRoommate').append(appendString);
-  }
-}
