@@ -1,17 +1,8 @@
+$(document).ready(autoFillHouseholdForm);
 
-
-function autoFillHouseholdForm () {
-  $( "houseName[type=text].tags" ).val(function( index, value ) {
-  return value.trim();
-  });
-
-  $( "inviteRoommate[type=text].tags" ).val(function( index, value ) {
-  return value.trim();
-  });
-
-  $("#selectRoommate").click(function(){
-      $("#selectRoommate option value").remove();
-  });
+function autoFillHouseholdForm (houseToFillWith) {
+  $("houseName[type=text].tags").val(houseToFillWith.HouseName);
+  $("inviteRoommate[type=text].tags").val(houseToFillWith.HouseRoomates);
 };
 
 
