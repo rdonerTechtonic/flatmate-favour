@@ -68,6 +68,7 @@ function init() {
 function flatMateFavour() {
   this.ffEvents = new Array();
   this.ffHouse = new Object();
+  this.ffDashboard = new Array();
 };
 
 function Event(obj) {
