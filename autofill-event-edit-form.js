@@ -48,3 +48,6 @@ function updateRoommateSelector () {
       $('#selectRoommate').append(appendString);
   };
 };
+
+//test case:
+// autoFill(testHousehold.ffEvents[1])
