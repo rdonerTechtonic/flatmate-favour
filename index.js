@@ -4,6 +4,65 @@ function init() {
   //eventually testHousehold will be dynamically replaced depending on user login
   window.testHousehold = new flatMateFavour();
   console.log('init runs');
+
+  window.testHousehold.ffHouse = new House (
+  {
+    HouseName:  "testHouseName",
+    HouseOwner: "owner@gmail.com",
+    HouseRoomates:  ["roommate1@gmail.com", "roommate2@gmail.com"]
+  }
+  )
+  console.log("Test House Data Loaded");
+  window.testHousehold.ffEvents[0] = new Event(
+  {
+    eventTitle: "testTitle0",
+    eventLocation: "testLocation0",
+    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventNotes: "testNotes0",
+    eventStartDate: "2018-10-09T21:04:47.678Z",
+    eventEndDate: "2018-10-09T23:04:47.678Z",
+    eventStatus: "accepted",
+    eventPostedBy: "devin"
+  })
+  console.log("Test Event Data Loaded");
+
+  window.testHousehold.ffEvents[1] = new Event(
+  {
+    eventTitle: "testTitle1",
+    eventLocation: "testLocation1",
+    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventNotes: "testNotes1",
+    eventStartDate: "2018-10-10T21:04:47.678Z",
+    eventEndDate: "2018-10-10T22:04:47.678Z",
+    eventStatus: "pending",
+    eventPostedBy: "ryan"
+  })
+  console.log("Test Event Data Loaded");
+
+  window.testHousehold.ffEvents[2] = new Event(
+  {
+    eventTitle: "testTitle2",
+    eventLocation: "testLocation2",
+    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventNotes: "testNotes2",
+    eventStartDate: "2018-10-11T19:04:47.678Z",
+    eventEndDate: "2018-10-11T21:04:47.678Z",
+    eventStatus: "done",
+    eventPostedBy: "ryan"
+  })
+  console.log("Test Event Data Loaded");
+  window.testHousehold.ffEvents[3] = new Event(
+  {
+    eventTitle: "testTitle3",
+    eventLocation: "testLocation3",
+    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventNotes: "testNotes3",
+    eventStartDate: "2018-10-12T18:04:47.678Z",
+    eventEndDate: "2018-10-12T23:04:47.678Z",
+    eventStatus: "thanked",
+    eventPostedBy: "ryan"
+  })
+  console.log("Test Event Data Loaded");
 }
 
 function flatMateFavour() {
