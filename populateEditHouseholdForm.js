@@ -1,22 +1,19 @@
-function editHouseName() {
+
+
+function autoFillHouseholdForm () {
   $( "houseName[type=text].tags" ).val(function( index, value ) {
   return value.trim();
+  });
 
-});
-}
-
-function editInviteRoommate() {
   $( "inviteRoommate[type=text].tags" ).val(function( index, value ) {
   return value.trim();
+  });
 
-});
-}
-
-function editSelectRoommate() {
   $("#selectRoommate").click(function(){
       $("#selectRoommate option value").remove();
   });
-}
+};
+
 
 
 // for (var i = 0; i < this.HouseRoomates.length; i++) {
