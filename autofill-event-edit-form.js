@@ -5,7 +5,7 @@
 //function that is called when button is pressed
 //function that populates edit form with information
 
-$(document).ready(autoFill);
+$(document).ready(updateRoommateSelector, autoFill);
 
 function autoFill (eventToFillWith) {
   $('#eventTitle').val(eventToFillWith.eventTitle);
@@ -28,6 +28,15 @@ function autoFill (eventToFillWith) {
   $('#startEventTime').val(onlyStartTime);
   $('#endEventDate').val(onlyEndDate);
   $('#endEventTime').val(onlyEndTime);
+};
+
+function updateRoommateSelector () {
+  $('#selectRoommate').children().remove()
+  for (var i = 0; i < testHousehold.ffHouse.HouseRoomates.length; i++) {
+    var roommateSelect = testHousehold.ffHouse.HouseRoomates[i];
+      var appendString = '<option value="' + i + '">' + testHousehold.ffHouse.HouseRoomates[i] + '</option>'
+      $('#selectRoommate').append(appendString);
+  };
 };
 
 //test case:
