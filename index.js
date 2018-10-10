@@ -6,6 +6,7 @@ function init() {
 
   var status = {
     accepted: {
+      status: "accepted",
       icon: {
         src: "Image-Sources/Hourglass-Icon.png",
         alt: "hourglass icon"
@@ -16,6 +17,7 @@ function init() {
       }
     },
     pending: {
+      status: "pending",
       icon: {
         src: "Image-Sources/Handshake-Icon.png",
         alt: "handshake icon"
@@ -26,6 +28,7 @@ function init() {
       }
     },
     done: {
+      status: "done",
       icon: {
           src: "Image-Sources/Check-Icon.png",
           alt: "check-icon"
@@ -36,6 +39,7 @@ function init() {
       }
     },
     thanked: {
+      status: "thanked",
       icon: {
           src: "Image-Sources/Check-Icon.png",
           alt: "check-icon"
@@ -112,7 +116,7 @@ function init() {
   console.log("Test Event Data Loaded");
 
   testHousehold.getEvents();
-
+  testHousehold.changeStatus();
 }
 
 
