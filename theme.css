@@ -87,7 +87,7 @@ i {
 }
 
 /* colors for background of the heading section of each card */
-.task-complete {
+/* .task-complete {
   background-color: #4bed71;
 }
 
@@ -97,7 +97,7 @@ i {
 
 .task-accepted {
   background-color: #edaf4b;
-}
+} */
 
 /* date label color */
 .dashboard-label {

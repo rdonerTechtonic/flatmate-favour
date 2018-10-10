@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Dashboard</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <!---<link rel="stylesheet" href="dashboard.css">---->
   <link rel="stylesheet" href="theme.css">
@@ -52,7 +52,7 @@
       <!-- each event is card -->
       <div class="card">
         <!-- the initial view is a head with status, title, and button -->
-        <div class="card-header task-complete">
+        <div class="card-header">
           <div class="row">
             <div class="col-2 status">
               <img src="Image-Sources/Check-Icon.png" alt="flatmate favour icon" class="header-icon">
@@ -60,7 +60,7 @@
 
               <!-- title button that links to dropdown -->
 
-              <button class="col-6 collapsed alert alert-success status" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="col-6 collapsed alert status" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
               Clean bathroom
             </button>
 
@@ -121,7 +121,7 @@
         </div>
 
         <div class="card">
-          <div class="card-header task-accepted" id="headingTwo">
+          <div class="card-header" id="headingTwo">
             <div class="row">
               <div class="col-2 status">
                 <img src="Image-Sources/Handshake-Icon.png" alt="flatmate favour icon" class="header-icon">
@@ -264,6 +264,8 @@
 
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
           </script>
+          <script src="index.js" charset="utf-8"></script>
+          <script src="populateDashboard.js" charset="utf-8"></script>
 
   </body>
 
