@@ -1,3 +1,5 @@
+
+
 $(document).ready(init);
 
 function init() {
@@ -39,7 +41,7 @@ function init() {
           alt: "check-icon"
         },
       button: {
-        class: "btn-success button-complete",
+        class: "btn-secondary button-complete",
         text: "Thanked!"
       }
     }
@@ -65,7 +67,8 @@ function init() {
     eventNotes: "testNotes0",
     eventStartDate: "2018-10-09T21:04:47.678Z",
     eventEndDate: "2018-10-09T23:04:47.678Z",
-    eventStatus: status.accepted.icon.src,
+    // eventStatus: status.accepted,
+    eventStatus: status.accepted,
     eventPostedBy: "devin"
   })
   console.log("Test Event Data Loaded");
@@ -78,7 +81,7 @@ function init() {
     eventNotes: "testNotes1",
     eventStartDate: "2018-10-10T21:04:47.678Z",
     eventEndDate: "2018-10-10T22:04:47.678Z",
-    eventStatus: "pending",
+    eventStatus: status.pending,
     eventPostedBy: "ryan"
   })
   console.log("Test Event Data Loaded");
@@ -91,7 +94,7 @@ function init() {
     eventNotes: "testNotes2",
     eventStartDate: "2018-10-11T19:04:47.678Z",
     eventEndDate: "2018-10-11T21:04:47.678Z",
-    eventStatus: "done",
+    eventStatus: status.done,
     eventPostedBy: "ryan"
   })
   console.log("Test Event Data Loaded");
@@ -103,10 +106,13 @@ function init() {
     eventNotes: "testNotes3",
     eventStartDate: "2018-10-12T18:04:47.678Z",
     eventEndDate: "2018-10-12T23:04:47.678Z",
-    eventStatus: "thanked",
+    eventStatus: status.thanked,
     eventPostedBy: "ryan"
   })
   console.log("Test Event Data Loaded");
+
+  testHousehold.getEvents();
+
 }
 
 
