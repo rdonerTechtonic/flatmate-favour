@@ -4,7 +4,12 @@ function filterDashboardEventByRoommate () {
   $('div.dashboardUsers > button').on('click', function () {
     var filteredResults = [];
     for (var i = 0; i < testHousehold.ffHouse.HouseRoomates.length; i++) {
-      filteredResults.push()
+      for (var x = 0; x < testHousehold.ffEvents.length; x++) {
+        if (testHousehold.ffHouse.HouseRoomates[i] === testHousehold.ffEvents[x].eventPostedBy){
+          filteredResults.push(testHousehold.ffEvents[x])
+        };
+      };
     };
+    $('#accordion').append('')
   });
 };
