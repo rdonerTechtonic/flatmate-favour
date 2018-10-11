@@ -55,69 +55,11 @@ function init() {
   window.testHousehold = new flatMateFavour();
   console.log('init runs');
 
-  window.testHousehold.ffHouse = new House (
-  {
-    HouseName:  "testHouseName",
-    HouseOwner: "owner@gmail.com",
-    HouseRoomates:  ["roommate1@gmail.com", "roommate2@gmail.com"]
-  }
-  )
-  console.log("Test House Data Loaded");
-  window.testHousehold.ffEvents[0] = new Event(
-  {
-    eventTitle: "testTitle0",
-    eventLocation: "testLocation0",
-    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-    eventNotes: "testNotes0",
-    eventStartDate: "2018-10-09T21:04:47.678Z",
-    eventEndDate: "2018-10-09T23:04:47.678Z",
-    // eventStatus: status.accepted,
-    eventStatus: status.accepted,
-    eventPostedBy: "devin"
-  })
-  console.log("Test Event Data Loaded");
 
-  window.testHousehold.ffEvents[1] = new Event(
-  {
-    eventTitle: "testTitle1",
-    eventLocation: "testLocation1",
-    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-    eventNotes: "testNotes1",
-    eventStartDate: "2018-10-10T21:04:47.678Z",
-    eventEndDate: "2018-10-10T22:04:47.678Z",
-    eventStatus: status.pending,
-    eventPostedBy: "ryan"
-  })
-  console.log("Test Event Data Loaded");
-
-  window.testHousehold.ffEvents[2] = new Event(
-  {
-    eventTitle: "testTitle2",
-    eventLocation: "testLocation2",
-    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-    eventNotes: "testNotes2",
-    eventStartDate: "2018-10-11T19:04:47.678Z",
-    eventEndDate: "2018-10-11T21:04:47.678Z",
-    eventStatus: status.done,
-    eventPostedBy: "ryan"
-  })
-  console.log("Test Event Data Loaded");
-  window.testHousehold.ffEvents[3] = new Event(
-  {
-    eventTitle: "testTitle3",
-    eventLocation: "testLocation3",
-    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-    eventNotes: "testNotes3",
-    eventStartDate: "2018-10-12T18:04:47.678Z",
-    eventEndDate: "2018-10-12T23:04:47.678Z",
-    eventStatus: status.thanked,
-    eventPostedBy: "ryan"
-  })
-  console.log("Test Event Data Loaded");
 
 //  testHousehold.getEvents();
 //  testHousehold.changeStatus();
-  testHousehold.updateRoommateSelector();
+//  testHousehold.updateRoommateSelector();
 }
 
 
@@ -155,6 +97,113 @@ flatMateFavour.prototype.updateRoommateSelector = function () {
   }
 }
 
+//Functions Related to event.html page
+
+flatMateFavour.prototype.grabNewEventData = function (eventPoster) {
+  var newEventTitle = $('#eventTitle').val();
+  var newEventLocation = $('#eventLocation').val();
+  var newEventRoommates = [""]
+  for (var i = 0; i < $('#selectRoommate option:selected').length; i++) {
+    newEventRoommates[i] = $('#selectRoommate option:selected')[i].text;
+  }
+  var newEventNotes = $('#eventNotes').val()
+  var newEventStartDate = $('#startEventDate').val() + "T" + $('#startEventTime').val() + ".000Z"
+  var newEventEndDate = $('#endEventDate').val() + "T" + $('#endEventTime').val() + ".000Z"
+  var newEventStatus = "unaccepted"
+  var newEventPostedBy = eventPoster;
+
+  var newEvent = new Event({
+    eventTitle: newEventTitle,
+    eventLocation: newEventLocation,
+    eventRoommates: newEventRoommates,
+    eventNotes: newEventNotes,
+    eventStartDate: newEventStartDate,
+    eventEndDate: newEventEndDate,
+    eventStatus: newEventStatus,
+    eventPostedBy: newEventPostedBy
+  })
+  return newEvent;
+};
+
+//Functions related to saving/loaded/clearing/test data
+flatMateFavour.prototype.clearData = function(){
+  this.ffDashboard = [];
+  this.ffEvents = [];
+  this.ffHouse = {};
+}
+
+flatMateFavour.prototype.saveData = function() {
+  localStorage.setItem("savedData", JSON.stringify(this));
+};
+
+flatMateFavour.prototype.loadData = function () {
+  var loadedData = new Object();
+  var loadedData = JSON.parse(localStorage.getItem("savedData"));
+  this.ffDashboard = loadedData.ffDashboard;
+  this.ffEvents = loadedData.ffEvents;
+  this.ffHouse = loadedData.ffHouse;
+}
+
+flatMateFavour.prototype.createTestData = function () {
+  window.testHousehold.ffHouse = new House (
+    {
+      HouseName:  "testHouseName",
+      HouseOwner: "owner@gmail.com",
+      HouseRoomates:  ["roommate1@gmail.com", "roommate2@gmail.com"]
+    }
+  )
+  console.log("Test House Data Loaded");
+  window.testHousehold.ffEvents[0] = new Event(
+  {
+  eventTitle: "testTitle0",
+  eventLocation: "testLocation0",
+  eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+  eventNotes: "testNotes0",
+  eventStartDate: "2018-10-09T21:04:47.678Z",
+  eventEndDate: "2018-10-09T23:04:47.678Z",
+  // eventStatus: status.accepted,
+  eventStatus: status.accepted,
+  eventPostedBy: "devin"
+  })
+  console.log("Test Event Data Loaded");
+  window.testHousehold.ffEvents[1] = new Event(
+    {
+      eventTitle: "testTitle1",
+      eventLocation: "testLocation1",
+      eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+      eventNotes: "testNotes1",
+      eventStartDate: "2018-10-10T21:04:47.678Z",
+      eventEndDate: "2018-10-10T22:04:47.678Z",
+      eventStatus: status.pending,
+      eventPostedBy: "ryan"
+    })
+  console.log("Test Event Data Loaded");
+
+  window.testHousehold.ffEvents[2] = new Event(
+    {
+    eventTitle: "testTitle2",
+    eventLocation: "testLocation2",
+    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventNotes: "testNotes2",
+    eventStartDate: "2018-10-11T19:04:47.678Z",
+    eventEndDate: "2018-10-11T21:04:47.678Z",
+    eventStatus: status.done,
+    eventPostedBy: "ryan"
+  })
+  console.log("Test Event Data Loaded");
+  window.testHousehold.ffEvents[3] = new Event(
+    {
+    eventTitle: "testTitle3",
+    eventLocation: "testLocation3",
+    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventNotes: "testNotes3",
+    eventStartDate: "2018-10-12T18:04:47.678Z",
+    eventEndDate: "2018-10-12T23:04:47.678Z",
+    eventStatus: status.thanked,
+    eventPostedBy: "ryan"
+  })
+  console.log("Test Event Data Loaded");
+}
 //  Function to [description here]
 //  flatMateFavour.prototype.methodName = function () {
 //
@@ -184,66 +233,3 @@ flatMateFavour.prototype.updateRoommateSelector = function () {
 //       //turn the bookShelf into a string, the save it to localStorage as "library"
 //       localStorage.setItem("events", JSON.stringify("testSave"));
 //     }
-
-
-
-
-
-//Test code to create a new house, uncomment and run in console.
-// new House (
-// {
-//   HouseName:  "testHouseName",
-//   HouseOwner: "owner@gmail.com",
-//   HouseRoomates:  ["roommate1@gmail.com", "roommate2@gmail.com"]
-// }
-// )
-
-//Test code to create 4 new events, uncomment and run in console.
-// testHousehold.ffEvents[0] = new Event(
-// {
-//   eventTitle: "testTitle0",
-//   eventLocation: "testLocation0",
-//   eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-//   eventNotes: "testNotes0",
-//   eventStartDate: "2018-10-09T21:04:47.678Z",
-//   eventEndDate: "2018-10-09T23:04:47.678Z",
-//   eventStatus: status.thanked,
-//   eventPostedBy: "devin"
-// })
-//
-// testHousehold.ffEvents[1] = new Event(
-// {
-//   eventTitle: "testTitle1",
-//   eventLocation: "testLocation1",
-//   eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-//   eventNotes: "testNotes1",
-//   eventStartDate: "2018-10-10T21:04:47.678Z",
-//   eventEndDate: "2018-10-10T22:04:47.678Z",
-//   eventStatus: "pending",
-//   eventPostedBy: "ryan"
-// })
-//
-//
-// testHousehold.ffEvents[2] = new Event(
-// {
-//   eventTitle: "testTitle2",
-//   eventLocation: "testLocation2",
-//   eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-//   eventNotes: "testNotes2",
-//   eventStartDate: "2018-10-11T19:04:47.678Z",
-//   eventEndDate: "2018-10-11T21:04:47.678Z",
-//   eventStatus: "done",
-//   eventPostedBy: "ryan"
-// })
-//
-// testHousehold.ffEvents[3] = new Event(
-// {
-//   eventTitle: "testTitle3",
-//   eventLocation: "testLocation3",
-//   eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-//   eventNotes: "testNotes3",
-//   eventStartDate: "2018-10-12T18:04:47.678Z",
-//   eventEndDate: "2018-10-12T23:04:47.678Z",
-//   eventStatus: "thanked",
-//   eventPostedBy: "ryan"
-// })
