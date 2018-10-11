@@ -1,53 +1,54 @@
+var currentStatus = {
+  accepted: {
+    status: "accepted",
+    icon: {
+      src: "Image-Sources/Hourglass-Icon.png",
+      alt: "hourglass icon"
+    },
+    button: {
+      class: "btn-warning",
+      text: "Done?"
+    }
+  },
+  pending: {
+    status: "pending",
+    icon: {
+      src: "Image-Sources/Handshake-Icon.png",
+      alt: "handshake icon"
+    },
+    button: {
+      class: "btn-danger",
+      text: "Accept"
+    }
+  },
+  done: {
+    status: "done",
+    icon: {
+      src: "Image-Sources/Check-Icon.png",
+      alt: "check-icon"
+    },
+    button: {
+      class: "btn-success button-complete",
+      text: "Thanks"
+    }
+  },
+  thanked: {
+    status: "thanked",
+    icon: {
+      src: "Image-Sources/Check-Icon.png",
+      alt: "check-icon"
+    },
+    button: {
+      class: "btn-secondary button-complete",
+      text: "Thanked!"
+    }
+  }
+}
+
 $(document).ready(init);
 
 function init() {
 
-  var status = {
-    accepted: {
-      status: "accepted",
-      icon: {
-        src: "Image-Sources/Hourglass-Icon.png",
-        alt: "hourglass icon"
-      },
-      button: {
-        class: "btn-warning",
-        text: "Done?"
-      }
-    },
-    pending: {
-      status: "pending",
-      icon: {
-        src: "Image-Sources/Handshake-Icon.png",
-        alt: "handshake icon"
-      },
-      button: {
-        class: "btn-danger",
-        text: "Accept"
-      }
-    },
-    done: {
-      status: "done",
-      icon: {
-        src: "Image-Sources/Check-Icon.png",
-        alt: "check-icon"
-      },
-      button: {
-        class: "btn-success button-complete",
-        text: "Thanks"
-      }
-    },
-    thanked: {
-      status: "thanked",
-      icon: {
-        src: "Image-Sources/Check-Icon.png",
-        alt: "check-icon"
-      },
-      button: {
-        class: "btn-secondary button-complete",
-        text: "Thanked!"
-      }
-    }
-  }
 
   //eventually testHousehold will be dynamically replaced depending on user login
   window.testHousehold = new flatMateFavour();
@@ -146,7 +147,7 @@ flatMateFavour.prototype.grabNewEventData = function(eventPoster) {
   var newEventNotes = $('#eventNotes').val()
   var newEventStartDate = $('#startEventDate').val() + "T" + $('#startEventTime').val() + ".000Z"
   var newEventEndDate = $('#endEventDate').val() + "T" + $('#endEventTime').val() + ".000Z"
-  var newEventStatus = status.pending;
+  var newEventStatus = currentStatus.pending;
   var newEventPostedBy = eventPoster;
 
   var newEvent = new Event({
@@ -177,7 +178,7 @@ flatMateFavour.prototype.initData = function() {
     eventNotes: "",
     eventStartDate: "",
     eventEndDate: "",
-    eventStatus: status.pending,
+    eventStatus: currentStatus.pending,
     eventPostedBy: ""
   })
 }
@@ -215,7 +216,7 @@ flatMateFavour.prototype.createTestData = function() {
     eventStartDate: "2018-10-09T21:04:47.678Z",
     eventEndDate: "2018-10-09T23:04:47.678Z",
     // eventStatus: status.accepted,
-    eventStatus: status.accepted,
+    eventStatus: currentStatus.accepted,
     eventPostedBy: "devin"
   })
   console.log("Test Event Data Loaded");
@@ -226,7 +227,7 @@ flatMateFavour.prototype.createTestData = function() {
     eventNotes: "testNotes1",
     eventStartDate: "2018-10-10T21:04:47.678Z",
     eventEndDate: "2018-10-10T22:04:47.678Z",
-    eventStatus: status.pending,
+    eventStatus: currentStatus.pending,
     eventPostedBy: "ryan"
   })
   console.log("Test Event Data Loaded");
@@ -238,7 +239,7 @@ flatMateFavour.prototype.createTestData = function() {
     eventNotes: "testNotes2",
     eventStartDate: "2018-10-11T19:04:47.678Z",
     eventEndDate: "2018-10-11T21:04:47.678Z",
-    eventStatus: status.done,
+    eventStatus: currentStatus.done,
     eventPostedBy: "ryan"
   })
   console.log("Test Event Data Loaded");
@@ -249,7 +250,7 @@ flatMateFavour.prototype.createTestData = function() {
     eventNotes: "testNotes3",
     eventStartDate: "2018-10-12T18:04:47.678Z",
     eventEndDate: "2018-10-12T23:04:47.678Z",
-    eventStatus: status.thanked,
+    eventStatus: currentStatus.thanked,
     eventPostedBy: "ryan"
   })
   console.log("Test Event Data Loaded");
