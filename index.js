@@ -204,7 +204,7 @@ flatMateFavour.prototype.createTestData = function() {
   window.testHousehold.ffHouse = new House({
     HouseName: "testHouseName",
     HouseOwner: "delaney",
-    HouseRoomates: ["ryan", "devin", "delaney", "renee", "steven"];
+    HouseRoomates: ["ryan", "devin", "delaney", "renee", "steven"],
   })
   console.log("Test House Data Loaded");
   window.testHousehold.ffEvents[0] = new Event({
