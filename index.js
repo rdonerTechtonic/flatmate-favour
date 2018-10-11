@@ -49,22 +49,21 @@ $(document).ready(init);
 
 function init() {
 
-
   //eventually testHousehold will be dynamically replaced depending on user login
   window.testHousehold = new flatMateFavour();
   console.log('init runs');
 
-
-
-  // testHousehold.getEvents();
-  // testHousehold.changeStatus();
-
   //Load saved local storage, if not found, load some blank data to prevent errors.
   if (localStorage.getItem("savedData")) {
     testHousehold.loadData();
+    console.log("local storage loaded");
   } else {
-    testHousehold.initData();
+    testHousehold.createTestData();
+    testHousehold.saveData();
+    console.log("test data loaded and saved to local storage")
   }
+  testHousehold.changeStatus();
+  testHousehold.getEvents();
   testHousehold.updateRoommateSelector();
 }
 
