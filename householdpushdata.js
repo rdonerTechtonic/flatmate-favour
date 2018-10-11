@@ -9,10 +9,25 @@ flatMateFavour.prototype.updateRoommateName = function() {
   window.testHousehold.ffHouse.HouseRoomates.push(newHouseRoommates);
 };
 
-flatMateFavour.prototype.submitButton = function() {
-  $("#inviteRoommateButton").click(function(event) {
-    event.prevent.Default();
-    updateRoommateName();
-    updateRoommateSelector();
-  });
-};
+
+$("#inviteRoommateButton").click(function(event) {
+  // event.preventDefault();
+  testHousehold.updateRoommateName();
+  testHousehold.updateRoommateSelector();
+});
+
+
+
+
+
+
+// flatMateFavour.prototype.submitButton = function() {
+//   // $("#inviteRoommateButton").click(function(event) {
+//   //   event.prevent.Default();
+//   //   updateRoommateName();
+//   //   updateRoommateSelector();
+//   $("#inviteRoommateButton").on("click", function(event) {
+//     event.preventDefault();
+//     console.log("button works");
+//   });
+// };
