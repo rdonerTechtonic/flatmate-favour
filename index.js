@@ -1,5 +1,3 @@
-
-
 $(document).ready(init);
 
 function init() {
@@ -21,7 +19,7 @@ function init() {
       icon: {
         src: "Image-Sources/Handshake-Icon.png",
         alt: "handshake icon"
-        },
+      },
       button: {
         class: "btn-danger",
         text: "Accept"
@@ -30,9 +28,9 @@ function init() {
     done: {
       status: "done",
       icon: {
-          src: "Image-Sources/Check-Icon.png",
-          alt: "check-icon"
-        },
+        src: "Image-Sources/Check-Icon.png",
+        alt: "check-icon"
+      },
       button: {
         class: "btn-success button-complete",
         text: "Thanks"
@@ -41,9 +39,9 @@ function init() {
     thanked: {
       status: "thanked",
       icon: {
-          src: "Image-Sources/Check-Icon.png",
-          alt: "check-icon"
-        },
+        src: "Image-Sources/Check-Icon.png",
+        alt: "check-icon"
+      },
       button: {
         class: "btn-secondary button-complete",
         text: "Thanked!"
@@ -57,8 +55,8 @@ function init() {
 
 
 
- // testHousehold.getEvents();
- // testHousehold.changeStatus();
+  // testHousehold.getEvents();
+  // testHousehold.changeStatus();
 
   //Load saved local storage, if not found, load some blank data to prevent errors.
   if (localStorage.getItem("savedData")) {
@@ -68,9 +66,6 @@ function init() {
   }
   testHousehold.updateRoommateSelector();
 }
-
-
-
 
 
 function flatMateFavour() {
@@ -95,12 +90,12 @@ function House(obj) {
   this.HouseRoomates = obj.HouseRoomates;
 }
 
-flatMateFavour.prototype.updateRoommateSelector = function () {
+flatMateFavour.prototype.updateRoommateSelector = function() {
   $('#selectRoommate').children().remove();
   for (var i = 0; i < testHousehold.ffHouse.HouseRoomates.length; i++) {
     var roommateSelect = testHousehold.ffHouse.HouseRoomates[i];
-      var appendString = '<option value="' + i + '">' + testHousehold.ffHouse.HouseRoomates[i] + '</option>'
-      $('#selectRoommate').append(appendString);
+    var appendString = '<option value="' + i + '">' + testHousehold.ffHouse.HouseRoomates[i] + '</option>'
+    $('#selectRoommate').append(appendString);
   }
 }
 
@@ -112,6 +107,25 @@ $("#createEventObject").click(function() {
 
 //Functions Related to household.html
 
+$("#inviteRoommateButton").click(function(event) {
+  testHousehold.updateRoommateName();
+  testHousehold.updateRoommateSelector();
+});
+
+$("#cancelInformation").click(function(event) {
+  window.location = 'dashboard.html';
+});
+
+$("#confirmInformation").click(function() {
+  window.location = 'dashboard.html';
+});
+
+//Function Related to the landing.html page
+$("#createHouseholdLandButton").click(function() {
+  window.location = 'household.html';
+});
+
+
 
 //Functions Related to event.html page
 $("#submitEventButton").click(function() {
@@ -122,7 +136,7 @@ $("#submitEventButton").click(function() {
   window.location = 'dashboard.html';
 });
 
-flatMateFavour.prototype.grabNewEventData = function (eventPoster) {
+flatMateFavour.prototype.grabNewEventData = function(eventPoster) {
   var newEventTitle = $('#eventTitle').val();
   var newEventLocation = $('#eventLocation').val();
   var newEventRoommates = [""]
@@ -150,28 +164,25 @@ flatMateFavour.prototype.grabNewEventData = function (eventPoster) {
 
 //Functions related to saving/loaded/clearing/test data
 
-flatMateFavour.prototype.initData = function(){
-  window.testHousehold.ffHouse = new House (
-    {
-      HouseName:  "",
-      HouseOwner: "",
-      HouseRoomates:  [""]
-    }
-  )
-  window.testHousehold.ffEvents[0] = new Event(
-  {
-  eventTitle: "",
-  eventLocation: "",
-  eventRoommates: [""],
-  eventNotes: "",
-  eventStartDate: "",
-  eventEndDate: "",
-  eventStatus: status.pending,
-  eventPostedBy: ""
+flatMateFavour.prototype.initData = function() {
+  window.testHousehold.ffHouse = new House({
+    HouseName: "",
+    HouseOwner: "",
+    HouseRoomates: [""]
+  })
+  window.testHousehold.ffEvents[0] = new Event({
+    eventTitle: "",
+    eventLocation: "",
+    eventRoommates: [""],
+    eventNotes: "",
+    eventStartDate: "",
+    eventEndDate: "",
+    eventStatus: status.pending,
+    eventPostedBy: ""
   })
 }
 
-flatMateFavour.prototype.clearData = function(){
+flatMateFavour.prototype.clearData = function() {
   this.ffDashboard = [];
   this.ffEvents = [];
   this.ffHouse = {};
@@ -181,7 +192,7 @@ flatMateFavour.prototype.saveData = function() {
   localStorage.setItem("savedData", JSON.stringify(this));
 };
 
-flatMateFavour.prototype.loadData = function () {
+flatMateFavour.prototype.loadData = function() {
   var loadedData = new Object();
   var loadedData = JSON.parse(localStorage.getItem("savedData"));
   this.ffDashboard = loadedData.ffDashboard;
@@ -189,43 +200,38 @@ flatMateFavour.prototype.loadData = function () {
   this.ffHouse = loadedData.ffHouse;
 }
 
-flatMateFavour.prototype.createTestData = function () {
-  window.testHousehold.ffHouse = new House (
-    {
-      HouseName:  "testHouseName",
-      HouseOwner: "owner@gmail.com",
-      HouseRoomates:  ["roommate1@gmail.com", "roommate2@gmail.com"]
-    }
-  )
+flatMateFavour.prototype.createTestData = function() {
+  window.testHousehold.ffHouse = new House({
+    HouseName: "testHouseName",
+    HouseOwner: "owner@gmail.com",
+    HouseRoomates: ["roommate1@gmail.com", "roommate2@gmail.com"]
+  })
   console.log("Test House Data Loaded");
-  window.testHousehold.ffEvents[0] = new Event(
-  {
-  eventTitle: "testTitle0",
-  eventLocation: "testLocation0",
-  eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-  eventNotes: "testNotes0",
-  eventStartDate: "2018-10-09T21:04:47.678Z",
-  eventEndDate: "2018-10-09T23:04:47.678Z",
-  // eventStatus: status.accepted,
-  eventStatus: status.accepted,
-  eventPostedBy: "devin"
+  window.testHousehold.ffEvents[0] = new Event({
+    eventTitle: "testTitle0",
+    eventLocation: "testLocation0",
+    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventNotes: "testNotes0",
+    eventStartDate: "2018-10-09T21:04:47.678Z",
+    eventEndDate: "2018-10-09T23:04:47.678Z",
+    // eventStatus: status.accepted,
+    eventStatus: status.accepted,
+    eventPostedBy: "devin"
   })
   console.log("Test Event Data Loaded");
-  window.testHousehold.ffEvents[1] = new Event(
-    {
-      eventTitle: "testTitle1",
-      eventLocation: "testLocation1",
-      eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
-      eventNotes: "testNotes1",
-      eventStartDate: "2018-10-10T21:04:47.678Z",
-      eventEndDate: "2018-10-10T22:04:47.678Z",
-      eventStatus: status.pending,
-      eventPostedBy: "ryan"
-    })
+  window.testHousehold.ffEvents[1] = new Event({
+    eventTitle: "testTitle1",
+    eventLocation: "testLocation1",
+    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventNotes: "testNotes1",
+    eventStartDate: "2018-10-10T21:04:47.678Z",
+    eventEndDate: "2018-10-10T22:04:47.678Z",
+    eventStatus: status.pending,
+    eventPostedBy: "ryan"
+  })
   console.log("Test Event Data Loaded");
 
-  window.testHousehold.ffEvents[2] = new Event(
-    {
+  window.testHousehold.ffEvents[2] = new Event({
     eventTitle: "testTitle2",
     eventLocation: "testLocation2",
     eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
@@ -236,8 +242,7 @@ flatMateFavour.prototype.createTestData = function () {
     eventPostedBy: "ryan"
   })
   console.log("Test Event Data Loaded");
-  window.testHousehold.ffEvents[3] = new Event(
-    {
+  window.testHousehold.ffEvents[3] = new Event({
     eventTitle: "testTitle3",
     eventLocation: "testLocation3",
     eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
