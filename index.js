@@ -132,7 +132,7 @@ flatMateFavour.prototype.grabNewEventData = function (eventPoster) {
   var newEventNotes = $('#eventNotes').val()
   var newEventStartDate = $('#startEventDate').val() + "T" + $('#startEventTime').val() + ".000Z"
   var newEventEndDate = $('#endEventDate').val() + "T" + $('#endEventTime').val() + ".000Z"
-  var newEventStatus = "unaccepted"
+  var newEventStatus = status.pending;
   var newEventPostedBy = eventPoster;
 
   var newEvent = new Event({
