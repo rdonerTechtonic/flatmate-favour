@@ -59,7 +59,8 @@ function init() {
 
 //  testHousehold.getEvents();
 //  testHousehold.changeStatus();
-//  testHousehold.updateRoommateSelector();
+  testHousehold.createTestData();
+  testHousehold.updateRoommateSelector();
 }
 
 
@@ -98,6 +99,12 @@ flatMateFavour.prototype.updateRoommateSelector = function () {
 }
 
 //Functions Related to event.html page
+
+$( "#submitEventButton" ).click(function() {
+  var newEvent
+  newEvent = testHousehold.grabNewEventData();
+  testHousehold.ffEvents.push(newEvent);
+});
 
 flatMateFavour.prototype.grabNewEventData = function (eventPoster) {
   var newEventTitle = $('#eventTitle').val();
