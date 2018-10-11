@@ -203,14 +203,14 @@ flatMateFavour.prototype.loadData = function() {
 flatMateFavour.prototype.createTestData = function() {
   window.testHousehold.ffHouse = new House({
     HouseName: "testHouseName",
-    HouseOwner: "owner@gmail.com",
-    HouseRoomates: ["roommate1@gmail.com", "roommate2@gmail.com"]
+    HouseOwner: "delaney",
+    HouseRoomates: ["ryan", "devin", "delaney", "renee", "steven"];
   })
   console.log("Test House Data Loaded");
   window.testHousehold.ffEvents[0] = new Event({
     eventTitle: "testTitle0",
     eventLocation: "testLocation0",
-    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventRoommates: ["ryan", "devin", "delaney", "renee", "steven"],
     eventNotes: "testNotes0",
     eventStartDate: "2018-10-09T21:04:47.678Z",
     eventEndDate: "2018-10-09T23:04:47.678Z",
@@ -222,7 +222,7 @@ flatMateFavour.prototype.createTestData = function() {
   window.testHousehold.ffEvents[1] = new Event({
     eventTitle: "testTitle1",
     eventLocation: "testLocation1",
-    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventRoommates: ["ryan", "devin", "delaney", "renee", "steven"],
     eventNotes: "testNotes1",
     eventStartDate: "2018-10-10T21:04:47.678Z",
     eventEndDate: "2018-10-10T22:04:47.678Z",
@@ -234,7 +234,7 @@ flatMateFavour.prototype.createTestData = function() {
   window.testHousehold.ffEvents[2] = new Event({
     eventTitle: "testTitle2",
     eventLocation: "testLocation2",
-    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventRoommates: ["ryan", "devin", "delaney", "renee", "steven"],
     eventNotes: "testNotes2",
     eventStartDate: "2018-10-11T19:04:47.678Z",
     eventEndDate: "2018-10-11T21:04:47.678Z",
@@ -245,7 +245,7 @@ flatMateFavour.prototype.createTestData = function() {
   window.testHousehold.ffEvents[3] = new Event({
     eventTitle: "testTitle3",
     eventLocation: "testLocation3",
-    eventRoommates: ["testEmail1@gmail.com, testEmail2@gmail.com"],
+    eventRoommates: ["ryan", "devin", "delaney", "renee", "steven"],
     eventNotes: "testNotes3",
     eventStartDate: "2018-10-12T18:04:47.678Z",
     eventEndDate: "2018-10-12T23:04:47.678Z",
