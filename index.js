@@ -57,9 +57,15 @@ function init() {
 
 
 
-//  testHousehold.getEvents();
-//  testHousehold.changeStatus();
-  testHousehold.createTestData();
+ // testHousehold.getEvents();
+ // testHousehold.changeStatus();
+
+  //Load saved local storage, if not found, load some blank data to prevent errors.
+  if (localStorage.getItem("savedData")) {
+    testHousehold.loadData();
+  } else {
+    testHousehold.initData();
+  }
   testHousehold.updateRoommateSelector();
 }
 
@@ -98,12 +104,22 @@ flatMateFavour.prototype.updateRoommateSelector = function () {
   }
 }
 
-//Functions Related to event.html page
 
-$( "#submitEventButton" ).click(function() {
+//Functions Related to dashboard.html
+$("#createEventObject").click(function() {
+  window.location = 'event.html';
+});
+
+//Functions Related to household.html
+
+
+//Functions Related to event.html page
+$("#submitEventButton").click(function() {
   var newEvent
   newEvent = testHousehold.grabNewEventData();
   testHousehold.ffEvents.push(newEvent);
+  testHousehold.saveData();
+  window.location = 'dashboard.html';
 });
 
 flatMateFavour.prototype.grabNewEventData = function (eventPoster) {
@@ -133,6 +149,28 @@ flatMateFavour.prototype.grabNewEventData = function (eventPoster) {
 };
 
 //Functions related to saving/loaded/clearing/test data
+
+flatMateFavour.prototype.initData = function(){
+  window.testHousehold.ffHouse = new House (
+    {
+      HouseName:  "",
+      HouseOwner: "",
+      HouseRoomates:  [""]
+    }
+  )
+  window.testHousehold.ffEvents[0] = new Event(
+  {
+  eventTitle: "",
+  eventLocation: "",
+  eventRoommates: [""],
+  eventNotes: "",
+  eventStartDate: "",
+  eventEndDate: "",
+  eventStatus: status.pending,
+  eventPostedBy: ""
+  })
+}
+
 flatMateFavour.prototype.clearData = function(){
   this.ffDashboard = [];
   this.ffEvents = [];
@@ -215,12 +253,6 @@ flatMateFavour.prototype.createTestData = function () {
 //  flatMateFavour.prototype.methodName = function () {
 //
 // };
-
-
-// Library.prototype.saveLibrary = function() {
-// //turn the bookShelf into a string, the save it to localStorage as "library"
-//   localStorage.setItem("library", JSON.stringify(this.bookShelf));
-// }
 
 
 
