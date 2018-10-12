@@ -1,6 +1,9 @@
 flatMateFavour.prototype.getEvents = function() {
   for (var i = 0; i < this.ffEvents.length; i++) {
-
+    var splitStartDate = this.ffEvents[i].eventStartDate.split('T');
+    var splitStartTime = splitStartDate[1].split('.');
+    var splitEndDate = this.ffEvents[i].eventEndDate.split('T');
+    var splitEndTime = splitStartDate[1].split('.');
     var newCard ='\
       <div class="card">\
         <div class="card-header task-accepted" id="heading'+ i +'">\
@@ -25,9 +28,6 @@ flatMateFavour.prototype.getEvents = function() {
                 <li class="list-inline-item">\
                   '+ this.ffEvents[i].eventRoommates[i] +'\
                 </li>\
-                <li class="list-inline-item">\
-                  '+ this.ffEvents[i].eventRoommates[i] +'\
-                </li>\
               </ul>\
               <div>\
                 <h2>Requestor:</h2>\
@@ -38,13 +38,15 @@ flatMateFavour.prototype.getEvents = function() {
               <div>\
                 <h2>Begin:</h2>\
                 <p>\
-                  '+ this.ffEvents[i].eventStartDate +'\
+                  '+ splitStartDate[0] +' <br />\
+                  '+ splitStartTime[0] +'\
                 </p>\
               </div>\
               <div>\
                 <h2>End:</h2>\
                 <p>\
-                '+ this.ffEvents[i].eventEndDate +'\
+                '+ splitEndDate[0] +' <br />\
+                '+ splitEndTime[0] +'\
                 </p>\
               </div>\
               <div>\
