@@ -9,6 +9,20 @@ flatMateFavour.prototype.updateRoommateName = function() {
   window.testHousehold.ffHouse.HouseRoomates.push(newHouseRoommates);
 };
 
+flatMateFavour.prototype.updateRoommateList = function() {
+  var roommateThatIsSelected = $('#selectRoommate option:selected').val();
+  for (var i = 0; i < $('#selectRoommate option:selected').length; i++) {
+    if (roommateThatIsSelected === testHousehold.ffHouse.HouseRoomates[i]); {
+      window.testHousehold.ffHouse.HouseRoomates.splice(roommateThatIsSelected, 1);
+      console.log("this worked");
+    };
+  };
+};
+$("#removeRoommateList").click(function(event) {
+  testHousehold.updateRoommateList();
+  testHousehold.updateRoommateSelector();
+});
+
 // flatMateFavour.prototype.getNewHouseData = function() {
 //     var newHouseName = $("#houseName").val();
 //     var newHouseRoommates = $('inviteRoommate').val();
