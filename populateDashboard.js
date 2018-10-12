@@ -129,21 +129,22 @@ flatMateFavour.prototype.addDashboardEventListeners = function() {
 };
 
 
-flatMateFavour.prototype.updateStatus = function() {
+flatMateFavour.prototype.updateStatus = function(e) {
   // console.log("hi");
   // if($(event.target).text() === '            Thanks          ') {
   //   console.log('yes');
   // }
   // console.log($(event.target).text());
+  console.log(e);
   //find text on button; also access index;
-  var index = $(event.target).attr('data-eventIndex');
+  var index = $(e.target).attr('data-eventIndex');
 
   //switch case here
-  switch($(event.target).text()){
+  switch($(e.target).text()){
     case '            Accept          ':
       console.log('moving to accepted');
-      // console.log(event.target);
-      // console.log($(event.target).attr('data-eventIndex'));
+      // console.log(e.target);
+      // console.log($(e.target).attr('data-eIndex'));
       testHousehold.ffEvents[index].eventStatus = currentStatus.accepted;
     break
 
