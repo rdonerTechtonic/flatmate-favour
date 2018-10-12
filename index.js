@@ -64,6 +64,7 @@ function init() {
   }
   testHousehold.getEvents();
   testHousehold.updateRoommateSelector();
+  testHousehold.addDashboardEventListeners();
   // testHousehold.addDashboardEventListeners();
 
 }

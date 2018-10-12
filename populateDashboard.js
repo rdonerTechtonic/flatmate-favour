@@ -72,7 +72,7 @@ flatMateFavour.prototype.getEvents = function() {
     $('#accordion').append(newCard);
   };
   // console.log(this);
-  this.addDashboardEventListeners();
+  // this.addDashboardEventListeners();
 
 };
 
@@ -162,7 +162,7 @@ flatMateFavour.prototype.updateStatus = function() {
   //update status
   //call rerender for accordion
 
-  $('.changeStatus').off();
+  // $('.changeStatus').off();
 
   $('#accordion').empty();
   testHousehold.getEvents();
