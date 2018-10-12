@@ -1,16 +1,20 @@
 $(document).ready(filter);
 
 function filter () {
-  $("div.dashboardUsers > button").on('click', function filterDashboardEventByRoommate() {
-    $('#accordion').children().remove();
+  $("span.dashboardUsers > button").on('click', function filterDashboardEventByRoommate(e) {
     var filteredEvents = [];
-    console.log(filteredEvents);
-    var buttonID = $("div.dashboardUsers > button").attr('id');
+    var buttonID = $(e.target).attr('id');
     for (var i = 0; i < testHousehold.ffEvents.length; i++) {
-      if(buttonID == testHousehold.ffEvents[i].eventPostedBy) {
-        filteredEvents.push(testHousehold.ffEvents[i]);
+      if(buttonID === testHousehold.ffEvents[i].eventPostedBy) {
+        console.log(testHousehold.ffEvents[i]);
+        filteredEvents.push(testHousehold.ffEvents[i])
       };
     };
-    $('#accordion').append(filteredEvents);
+    if (filteredEvents.length === 0) {
+      alert("No events posted by this user!");
+    }else {
+      $('#accordion').children().remove();
+      console.log(filteredEvents);
+    };
   });
 };
