@@ -71,8 +71,6 @@ flatMateFavour.prototype.getEvents = function() {
 
     $('#accordion').append(newCard);
   };
-  // console.log(this);
-  // this.addDashboardEventListeners();
 
 };
 
@@ -80,61 +78,11 @@ flatMateFavour.prototype.getEvents = function() {
 
 flatMateFavour.prototype.addDashboardEventListeners = function() {
   $('#accordion').on('click','.changeStatus', this.updateStatus);
-  // $('#accordion').on('click','.changeStatus', function(event){
-    // console.log('button was clicked');
-  // });
-
-  // $('#accordion').empty();
-
-
-// $('#accordion').on('click', '.changeStatus', function(i){
-//   console.log('button clicked');
-// })
-//   $('.changeStatus').each(function(i) {
-//     $(this).click(function(){
-      // switch(testHousehold.ffEvents[i].eventStatus.status){
-      //   case "pending":
-      //     console.log('status is pending. moving to accepted');
-      //     testHousehold.ffEvents[i].eventStatus = currentStatus.accepted;
-      //   break
-      //
-      //   case "accepted":
-      //     console.log('status is accepted. moving to done');
-      //     testHousehold.ffEvents[i].eventStatus = currentStatus.done;
-      //   break
-      //
-      //   case "done":
-      //     console.log('status is done. moving to thanked');
-      //     testHousehold.ffEvents[i].eventStatus = currentStatus.thanked;
-      //   break
-      // }
-      // testHousehold.getEvents();
-      // testHousehold.ffEvents[i].eventStatus = currentStatus.done;
-      // console.log(i);
-      // console.log(testHousehold.ffEvents[i].eventStatus);
-    // console.log("you clicked on the done button");
-    // if(this.ffEvents[0].eventStatus.status === "done") {
-    //   console.log("you clicked on the done button");
-    // } else{
-
-
-      // console.log($(this).parent().children()[0])
-    // testHousehold.ffEvents[0].eventStatus = currentStatus.done;
-    // // this.class;
-    // // console.log(testHousehold.ffEvents[0].eventStatus);
-    // // console.log(this);
-    // // console.log(this);
-    // $(this).toggleClass('btn-warning');
-    // $(this).addClass('btn-success');
 };
 
 
 flatMateFavour.prototype.updateStatus = function(e) {
-  // console.log("hi");
-  // if($(event.target).text() === '            Thanks          ') {
-  //   console.log('yes');
-  // }
-  // console.log($(event.target).text());
+
   console.log(e);
   //find text on button; also access index;
   var index = $(e.target).attr('data-eventIndex');
@@ -143,8 +91,6 @@ flatMateFavour.prototype.updateStatus = function(e) {
   switch($(e.target).text()){
     case '            Accept          ':
       console.log('moving to accepted');
-      // console.log(e.target);
-      // console.log($(e.target).attr('data-eIndex'));
       testHousehold.ffEvents[index].eventStatus = currentStatus.accepted;
     break
 
@@ -160,11 +106,7 @@ flatMateFavour.prototype.updateStatus = function(e) {
 
 
   }
-  //update status
   //call rerender for accordion
-
-  // $('.changeStatus').off();
-
   $('#accordion').empty();
   testHousehold.getEvents();
 };
