@@ -47,6 +47,12 @@ label {
   text-align: right;
 }
 
+.btn-info {
+  margin: 1%;
+  background-color: #98c1d9;
+  border-color: #98c1d9;
+}
+
 /* event.html styling: form spacing */
 .dateWidth {
   width: 55%;
@@ -113,6 +119,14 @@ i {
 /* user icons at top */
 .fa-users, .fa-user, .fa-home, .fa-users-cog {
   color: #e0fbfc;
+}
+
+.fa-users {
+  float: left;
+}
+
+.fa-users-cog {
+  float: right;
 }
 
 /* icons for each card */
