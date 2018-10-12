@@ -65,8 +65,7 @@ function init() {
   testHousehold.getEvents();
   testHousehold.updateRoommateSelector();
   testHousehold.addDashboardEventListeners();
-  // testHousehold.addDashboardEventListeners();
-
+  testHousehold.autoFillHouseholdForm();
 }
 
 
@@ -108,6 +107,10 @@ $("#createEventObject").click(function() {
 });
 
 //Functions Related to household.html
+flatMateFavour.prototype.autoFillHouseholdForm = function() {
+    $("#houseName").val(testHousehold.ffHouse.HouseName);
+}
+
 flatMateFavour.prototype.saveHouseData = function() {
   console.log("Old Housename: " + testHousehold.ffHouse.HouseName);
   testHousehold.ffHouse.HouseName = $('#houseName').val();
@@ -298,11 +301,6 @@ flatMateFavour.prototype.createTestData = function() {
   })
   console.log("Test Event Data Loaded");
 }
-//  Function to [description here]
-//  flatMateFavour.prototype.methodName = function () {
-//
-// };
-
 
 
 // flatMateFavour.prototype.getEvents = function() {
