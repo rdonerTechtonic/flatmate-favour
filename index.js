@@ -171,7 +171,7 @@ $("#createHouseholdLandButton").click(function() {
 //Functions Related to event.html page
 $("#submitEventButton").click(function() {
   var newEvent
-  newEvent = testHousehold.grabNewEventData();
+  newEvent = testHousehold.grabNewEventData("testPoster");
   testHousehold.ffEvents.push(newEvent);
   testHousehold.saveData();
   window.location = 'dashboard.html';
