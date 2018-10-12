@@ -3,9 +3,12 @@
 #98c1d9 Pale Cerulean
 #e0fbfc Light Cyan
 #edaf4b Maximum Yellow Red (yellow)
+#edbf76 Middle Yellow Red (yellow hover)
 #293241 Gunmetal
 #ee6c4d Light Red Ochre (red)
+#ed927b Dark Salmon (red hover)
 #4bed71 UFO Green (green)
+#93eda8 Teal Deer (green hover)
 */
 /* general styling including buttons, headers, font, background */
 body {
@@ -32,10 +35,21 @@ label {
   color: #000;
 }
 
+.btn-danger:hover {
+  background-color: #ed927b;
+  border-color: #ed927b;
+  color: #000;
+}
+
 .btn-primary {
   background-color: #4bed71;
   border-color: transparent;
   color: #000;
+}
+
+.btn-primary:hover {
+  background-color: #93eda8;
+  border-color: #93eda8;
 }
 
 .centerButton {
@@ -56,6 +70,18 @@ label {
 .btn-info:hover {
   background-color: #293241;
   border-color: #293241;
+}
+
+.btn-secondary {
+  background-color: #93eda8;
+  border-color: #93eda8;
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background-color: #93eda8;
+  border-color: #93eda8;
+  color: #000;
 }
 
 /* event.html styling: form spacing */
@@ -175,20 +201,26 @@ i {
   color: #000;
 }
 
-/* button hover */
-.btn-success:hover, .btn-warning:hover, .btn-danger:hover {
-  background-color: #fff;
-  color: #000;
-}
-
 /* thanks button bg color */
 .btn-success {
   background-color: #4bed71;
 }
 
+.btn-success:hover{
+  background-color: #93eda8;
+  border-color: #93eda8;
+  color: #000;
+}
+
 /* thanks button bg color */
 .btn-warning {
   background-color: #edaf4b;
+}
+
+.btn-warning:hover {
+  background-color: #edbf76;
+  border-color: #edbf76;
+  color: #000;
 }
 
 /* thanks button bg color */
