@@ -53,6 +53,11 @@ label {
   border-color: #98c1d9;
 }
 
+.btn-info:hover {
+  background-color: #293241;
+  border-color: #293241;
+}
+
 /* event.html styling: form spacing */
 .dateWidth {
   width: 55%;
