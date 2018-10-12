@@ -41,6 +41,12 @@ label {
   color: #000;
 }
 
+.btn-danger:not(:disabled):not(.disabled):active {
+  background-color: #ee6c4d;
+  border-color: transparent;
+  color: #000;
+}
+
 .btn-primary {
   background-color: #4bed71;
   border-color: transparent;
@@ -50,6 +56,12 @@ label {
 .btn-primary:hover {
   background-color: #93eda8;
   border-color: #93eda8;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: #4bed71;
+  border-color: transparent;
+  color: #000;
 }
 
 .centerButton {
@@ -218,6 +230,12 @@ i {
   color: #000;
 }
 
+.btn-success:not(:disabled):not(.disabled):active{
+  background-color: #4bed71;
+  border-color: #4bed71;
+  color: #000;
+}
+
 /* thanks button bg color */
 .btn-warning {
   background-color: #edaf4b;
@@ -226,6 +244,12 @@ i {
 .btn-warning:hover {
   background-color: #edbf76;
   border-color: #edbf76;
+  color: #000;
+}
+
+.btn-warning:not(:disabled):not(.disabled):active {
+  background-color: #edaf4b;
+  border-color: #edaf4b;
   color: #000;
 }
 
