@@ -107,7 +107,7 @@ $("#createEventObject").click(function() {
 });
 
 //Functions Related to household.html
-flatMateFavour.prototype.saveHouseData = function () {
+flatMateFavour.prototype.saveHouseData = function() {
   console.log("Old Housename: " + testHousehold.ffHouse.HouseName);
   testHousehold.ffHouse.HouseName = $('#houseName').val();
   console.log("New Housename: " + testHousehold.ffHouse.HouseName);
@@ -127,7 +127,7 @@ flatMateFavour.prototype.addRoommateToSelector = function() {
 
 flatMateFavour.prototype.removeRoommateFromSelector = function() {
   var selectedList = [];
-  for (var i = 0; i < $('#selectRoommate option:selected').length ; i++) {
+  for (var i = 0; i < $('#selectRoommate option:selected').length; i++) {
     selectedList.push($('#selectRoommate option:selected')[i].text)
   }
   for (var i = 0; i < $('#selectRoommate').children().length; i++) {
@@ -144,7 +144,7 @@ $("#removeRoommateList").click(function(event) {
 });
 
 $("#inviteRoommateButton").click(function(event) {
-    testHousehold.addRoommateToSelector();
+  testHousehold.addRoommateToSelector();
 });
 
 $("#cancelInformation").click(function(event) {
@@ -172,6 +172,12 @@ $("#submitEventButton").click(function() {
   testHousehold.saveData();
   window.location = 'dashboard.html';
 });
+
+$("#cancelEventButton").click(function() {
+  window.location = 'dashboard.html';
+});
+
+
 
 flatMateFavour.prototype.grabNewEventData = function(eventPoster) {
   var newEventTitle = $('#eventTitle').val();
