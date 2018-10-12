@@ -14,7 +14,7 @@ flatMateFavour.prototype.getEvents = function() {
               <button class="col-6 collapsed alert status" data-toggle="collapse" data-target="#collapse'+ i +'" aria-expanded="false" aria-controls="collapse'+ i + '" id="item1">\
             '+ this.ffEvents[i].eventTitle + '\
           </button>\
-              <button class="col-3 ml-auto changeStatus btn ' + this.ffEvents[i].eventStatus.button.class + '" type="button" name="button">\
+              <button class="col-3 ml-auto changeStatus btn ' + this.ffEvents[i].eventStatus.button.class + '" type="button" name="button" data-eventIndex="'+ i + '">\
             '+ this.ffEvents[i].eventStatus.button.text + '\
           </button>\
             </div>\
@@ -70,32 +70,45 @@ flatMateFavour.prototype.getEvents = function() {
       '
 
     $('#accordion').append(newCard);
-    testHousehold.addDashboardEventListeners();
   };
+  // console.log(this);
+  this.addDashboardEventListeners();
+
 };
 
+
+
 flatMateFavour.prototype.addDashboardEventListeners = function() {
+  $('#accordion').on('click','.changeStatus', this.updateStatus);
+  // $('#accordion').on('click','.changeStatus', function(event){
+    // console.log('button was clicked');
+  // });
 
-  $('.changeStatus').each(function(i) {
-    $(this).click(function(){
-      switch(testHousehold.ffEvents[i].eventStatus.status){
-        case "pending":
-          console.log('status is pending. moving to accepted');
-          testHousehold.ffEvents[i].eventStatus = currentStatus.accepted;
-        break
+  // $('#accordion').empty();
 
-        case "accepted":
-          console.log('status is accepted. moving to done');
-          testHousehold.ffEvents[i].eventStatus = currentStatus.done;
-        break
 
-        case "done":
-          console.log('status is done. moving to thanked');
-          testHousehold.ffEvents[i].eventStatus = currentStatus.thanked;
-        break
-      }
-      $('#accordion').empty();
-      testHousehold.getEvents();
+// $('#accordion').on('click', '.changeStatus', function(i){
+//   console.log('button clicked');
+// })
+//   $('.changeStatus').each(function(i) {
+//     $(this).click(function(){
+      // switch(testHousehold.ffEvents[i].eventStatus.status){
+      //   case "pending":
+      //     console.log('status is pending. moving to accepted');
+      //     testHousehold.ffEvents[i].eventStatus = currentStatus.accepted;
+      //   break
+      //
+      //   case "accepted":
+      //     console.log('status is accepted. moving to done');
+      //     testHousehold.ffEvents[i].eventStatus = currentStatus.done;
+      //   break
+      //
+      //   case "done":
+      //     console.log('status is done. moving to thanked');
+      //     testHousehold.ffEvents[i].eventStatus = currentStatus.thanked;
+      //   break
+      // }
+      // testHousehold.getEvents();
       // testHousehold.ffEvents[i].eventStatus = currentStatus.done;
       // console.log(i);
       // console.log(testHousehold.ffEvents[i].eventStatus);
@@ -113,6 +126,44 @@ flatMateFavour.prototype.addDashboardEventListeners = function() {
     // // console.log(this);
     // $(this).toggleClass('btn-warning');
     // $(this).addClass('btn-success');
-    });
-  });
-}
+};
+
+
+flatMateFavour.prototype.updateStatus = function() {
+  // console.log("hi");
+  // if($(event.target).text() === '            Thanks          ') {
+  //   console.log('yes');
+  // }
+  // console.log($(event.target).text());
+  //find text on button; also access index;
+  var index = $(event.target).attr('data-eventIndex');
+
+  //switch case here
+  switch($(event.target).text()){
+    case '            Accept          ':
+      console.log('moving to accepted');
+      // console.log(event.target);
+      // console.log($(event.target).attr('data-eventIndex'));
+      testHousehold.ffEvents[index].eventStatus = currentStatus.accepted;
+    break
+
+    case '            Done?          ':
+      console.log('moving to done');
+      testHousehold.ffEvents[index].eventStatus = currentStatus.done;
+    break
+
+    case '            Thanks          ':
+      console.log('moving to thanked');
+      testHousehold.ffEvents[index].eventStatus = currentStatus.thanked;
+    break
+
+
+  }
+  //update status
+  //call rerender for accordion
+
+  $('.changeStatus').off();
+
+  $('#accordion').empty();
+  testHousehold.getEvents();
+};

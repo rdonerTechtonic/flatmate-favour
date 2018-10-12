@@ -29,7 +29,7 @@ var currentStatus = {
     },
     button: {
       class: "btn-success button-complete",
-      text: "Give Thanks"
+      text: "Thanks"
     }
   },
   thanked: {
