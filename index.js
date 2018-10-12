@@ -107,10 +107,44 @@ $("#createEventObject").click(function() {
 });
 
 //Functions Related to household.html
+flatMateFavour.prototype.saveHouseData = function () {
+  console.log("Old Housename: " + testHousehold.ffHouse.HouseName);
+  testHousehold.ffHouse.HouseName = $('#houseName').val();
+  console.log("New Housename: " + testHousehold.ffHouse.HouseName);
+  var updatedRoommates = [];
+  console.log("Old Roommates: " + testHousehold.ffHouse.HouseRoomates);
+  for (var i = 0; i < $('#selectRoommate').children().length; i++) {
+    updatedRoommates.push($('#selectRoommate').children()[i].text)
+  }
+  testHousehold.ffHouse.HouseRoomates = updatedRoommates;
+}
+
+flatMateFavour.prototype.addRoommateToSelector = function() {
+  var newHouseRoommates = $("#inviteRoommate").val();
+  var appendString = '<option value="' + $('#selectRoommate').children().length + '">' + newHouseRoommates + '</option>'
+  $('#selectRoommate').append(appendString);
+};
+
+flatMateFavour.prototype.removeRoommateFromSelector = function() {
+  var selectedList = [];
+  for (var i = 0; i < $('#selectRoommate option:selected').length ; i++) {
+    selectedList.push($('#selectRoommate option:selected')[i].text)
+  }
+  for (var i = 0; i < $('#selectRoommate').children().length; i++) {
+    if (selectedList.includes($('#selectRoommate').children()[i].text)) {
+      console.log($('#selectRoommate').children()[i].text);
+      $('#selectRoommate').children()[i].remove();
+      i--;
+    }
+  }
+}
+
+$("#removeRoommateList").click(function(event) {
+  testHousehold.removeRoommateFromSelector();
+});
 
 $("#inviteRoommateButton").click(function(event) {
-  testHousehold.updateRoommateName();
-  testHousehold.updateRoommateSelector();
+    testHousehold.addRoommateToSelector();
 });
 
 $("#cancelInformation").click(function(event) {
@@ -118,6 +152,8 @@ $("#cancelInformation").click(function(event) {
 });
 
 $("#confirmInformation").click(function() {
+  testHousehold.saveHouseData();
+  testHousehold.saveData();
   window.location = 'dashboard.html';
 });
 
