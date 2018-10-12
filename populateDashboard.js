@@ -14,7 +14,7 @@ flatMateFavour.prototype.getEvents = function() {
               <button class="col-6 collapsed alert status" data-toggle="collapse" data-target="#collapse'+ i +'" aria-expanded="false" aria-controls="collapse'+ i + '" id="item1">\
             '+ this.ffEvents[i].eventTitle + '\
           </button>\
-              <button class="col-3 ml-auto btn ' + this.ffEvents[i].eventStatus.button.class + '" type="button" name="button">\
+              <button class="col-3 ml-auto changeStatus btn ' + this.ffEvents[i].eventStatus.button.class + '" type="button" name="button">\
             '+ this.ffEvents[i].eventStatus.button.text + '\
           </button>\
             </div>\
@@ -70,68 +70,49 @@ flatMateFavour.prototype.getEvents = function() {
       '
 
     $('#accordion').append(newCard);
+    testHousehold.addDashboardEventListeners();
   };
 };
 
-flatMateFavour.prototype.changeStatus = function() {
+flatMateFavour.prototype.addDashboardEventListeners = function() {
 
-  var status = {
-    accepted: {
-      status: "accepted",
-      icon: {
-        src: "Image-Sources/Hourglass-Icon.png",
-        alt: "hourglass icon"
-      },
-      button: {
-        class: "btn-warning",
-        text: "Done?"
-      }
-    },
-    pending: {
-      status: "pending",
-      icon: {
-        src: "Image-Sources/Handshake-Icon.png",
-        alt: "handshake icon"
-        },
-      button: {
-        class: "btn-danger",
-        text: "Accept"
-      }
-    },
-    done: {
-      status: "done",
-      icon: {
-          src: "Image-Sources/Check-Icon.png",
-          alt: "check-icon"
-        },
-      button: {
-        class: "btn-success button-complete",
-        text: "Thanks"
-      }
-    },
-    thanked: {
-      status: "thanked",
-      icon: {
-          src: "Image-Sources/Check-Icon.png",
-          alt: "check-icon"
-        },
-      button: {
-        class: "btn-secondary button-complete",
-        text: "Thanked!"
-      }
-    }
-  }
+  $('.changeStatus').each(function(i) {
+    $(this).click(function(){
+      switch(testHousehold.ffEvents[i].eventStatus.status){
+        case "pending":
+          console.log('status is pending. moving to accepted');
+          testHousehold.ffEvents[i].eventStatus = currentStatus.accepted;
+        break
 
-  // console.log(this.ffEvents[0].eventStatus.status);
-  $(".btn-warning").click(function(){
+        case "accepted":
+          console.log('status is accepted. moving to done');
+          testHousehold.ffEvents[i].eventStatus = currentStatus.done;
+        break
+
+        case "done":
+          console.log('status is done. moving to thanked');
+          testHousehold.ffEvents[i].eventStatus = currentStatus.thanked;
+        break
+      }
+      $('#accordion').empty();
+      testHousehold.getEvents();
+      // testHousehold.ffEvents[i].eventStatus = currentStatus.done;
+      // console.log(i);
+      // console.log(testHousehold.ffEvents[i].eventStatus);
     // console.log("you clicked on the done button");
     // if(this.ffEvents[0].eventStatus.status === "done") {
     //   console.log("you clicked on the done button");
     // } else{
-    //   console.log("no work");
-    testHousehold.ffEvents[0].eventStatus = status.done;
-    this.class;
-    // console.log(testHousehold.ffEvents[0].eventStatus);
-    // console.log(this);
-  })
+
+
+      // console.log($(this).parent().children()[0])
+    // testHousehold.ffEvents[0].eventStatus = currentStatus.done;
+    // // this.class;
+    // // console.log(testHousehold.ffEvents[0].eventStatus);
+    // // console.log(this);
+    // // console.log(this);
+    // $(this).toggleClass('btn-warning');
+    // $(this).addClass('btn-success');
+    });
+  });
 }

@@ -1,15 +1,4 @@
 var currentStatus = {
-  accepted: {
-    status: "accepted",
-    icon: {
-      src: "Image-Sources/Hourglass-Icon.png",
-      alt: "hourglass icon"
-    },
-    button: {
-      class: "btn-warning",
-      text: "Done?"
-    }
-  },
   pending: {
     status: "pending",
     icon: {
@@ -21,6 +10,17 @@ var currentStatus = {
       text: "Accept"
     }
   },
+  accepted: {
+    status: "accepted",
+    icon: {
+      src: "Image-Sources/Hourglass-Icon.png",
+      alt: "hourglass icon"
+    },
+    button: {
+      class: "btn-warning",
+      text: "Done?"
+    }
+  },
   done: {
     status: "done",
     icon: {
@@ -29,7 +29,7 @@ var currentStatus = {
     },
     button: {
       class: "btn-success button-complete",
-      text: "Thanks"
+      text: "Give Thanks"
     }
   },
   thanked: {
@@ -62,9 +62,10 @@ function init() {
     testHousehold.saveData();
     console.log("test data loaded and saved to local storage")
   }
-  testHousehold.changeStatus();
   testHousehold.getEvents();
   testHousehold.updateRoommateSelector();
+  // testHousehold.addDashboardEventListeners();
+
 }
 
 
