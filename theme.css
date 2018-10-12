@@ -73,14 +73,20 @@ label {
 }
 
 .btn-secondary {
-  background-color: #93eda8;
-  border-color: #93eda8;
+  background-color: #3d5a80;
+  border-color: #3d5a80;
   color: #000;
 }
 
 .btn-secondary:hover {
-  background-color: #93eda8;
-  border-color: #93eda8;
+  background-color: #3d5a80;
+  border-color: #3d5a80;
+  color: #000;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active {
+  background-color: #3d5a80;
+  border-color: #3d5a80;
   color: #000;
 }
 
