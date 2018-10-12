@@ -87,19 +87,19 @@ label {
 .btn-secondary {
   background-color: #3d5a80;
   border-color: #3d5a80;
-  color: #000;
+  color: #fff;
 }
 
 .btn-secondary:hover {
   background-color: #3d5a80;
   border-color: #3d5a80;
-  color: #000;
+  color: #fff;
 }
 
 .btn-secondary:not(:disabled):not(.disabled):active {
   background-color: #3d5a80;
   border-color: #3d5a80;
-  color: #000;
+  color: #fff;
 }
 
 /* event.html styling: form spacing */
