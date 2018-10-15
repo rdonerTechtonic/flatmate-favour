@@ -17,6 +17,8 @@ flatMateFavour.prototype.filterByDate = function() {
   //     console.log(filteredEvents);
   //   };
   // });
-console.log('hi');
-  console.log($('#formGroupExampleInput2').val());
+// console.log(new Date());
+// $('.datepicker').datepicker('setDate', new Date);
+console.log($('.datepicker').datepicker( "setDate", "10/12/2012" ));
+  // console.log($('#formGroupExampleInput2').val());
 };
